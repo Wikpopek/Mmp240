@@ -24,15 +24,15 @@
 
 .text{
     position: absolute;
-    top: 30%;
-    left: 20%;
+    top: 50%;
+    left: 30%;
     transform: translate(-50%,-50%);
     color: white;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: lighter;
     text-align: center;
     background: rgba(#ffff);
-    padding: 10px 20px;
+    padding: 50px 20px;
     border-radius: 5px;}
 
 
