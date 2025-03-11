@@ -1,19 +1,19 @@
 
 
 
-.image-container {
+.image-container{
     position: relative;
     width: 100%;
     height: 400px;
 }
 
-.background {
+.background{
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.logo {
+.logo{
  position: absolute; 
  top: 20%;
  left: 27%;
