@@ -24,13 +24,13 @@
 
 .text{
     position: absolute;
-    top: 50%;
-    left: 30%;
+    top: 40%;
+    left: 27%;
     transform: translate(-50%,-50%);
     color: white;
-    font-size: 20px;
+    font-size: 25px;
     font-weight: lighter;
-    text-align: center;
+    text-align: left;
     background: rgba(#ffff);
     padding: 50px 20px;
     border-radius: 5px;}
