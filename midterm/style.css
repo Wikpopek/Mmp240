@@ -25,10 +25,10 @@
 .text{
     position: absolute;
     top: 40%;
-    left: 27%;
+    left: 25%;
     transform: translate(-50%,-50%);
     color: white;
-    font-size: 25px;
+    font-size: 20px;
     font-weight: lighter;
     text-align: left;
     background: rgba(#ffff);
