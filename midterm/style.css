@@ -13,8 +13,8 @@
 
 .logo{
  position: absolute; 
- top: 20%;
- left: 31%;
+ top: 17%;
+ left: 34%;
  transform: translate(-80%,-50%);
  width: 450px;
  height: auto; 
@@ -39,7 +39,7 @@
 
 .btn {
     position: absolute;
-    top: 45%;
+    top: 43%;
     left: 1%;
     display: inline-block;
     background-color: gray;
@@ -62,12 +62,12 @@ nav{
     background-color: rgb(0, 0, 0);}
 
 nav li{
-        display: inline-block;
-       color: #ffff;}
+       display: inline-block;
+       color: #ffffff;}
      
 nav a{
         display: inline-block;
-        padding: 0.5em 4em;
+        padding: 1em 5em;
         color: white;
         text-decoration: none;}
 
