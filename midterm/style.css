@@ -114,12 +114,12 @@ nav a{
     margin-bottom: 30px;
     border: solid 1px  grey;
     /*border:solid .75px #ddd;*/
-    flex: 0 0 auto;  /*flow-grow, flex-shrink,flex-basis*/
+    flex: 1 1 auto;  /*flow-grow, flex-shrink,flex-basis*/
     padding: .93em;
 }
 
 .episode-card :last-child {
-    margin-right:0px;
+    margin-right:17px;
 }
 
 .episode-card img{
@@ -127,7 +127,8 @@ nav a{
 }
 
 .episode-card p, .episode-card h4{
-    margin: 1em;
+    padding-right: .93em;
+    padding-left: .93em;
 }
 
 
