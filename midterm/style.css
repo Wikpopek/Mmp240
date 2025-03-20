@@ -1,6 +1,12 @@
 
 
+/*{
+    marign:0;
+    padding:0;
+    border:none;
 
+}*/
+body{
 .image-container{
     position: relative;
     width: 100%;
@@ -122,6 +128,7 @@ nav a{
 
 .episode-card p, .episode-card h4{
     margin: 1em;
+}
 }
 
 
