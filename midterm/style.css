@@ -112,7 +112,7 @@ nav a{
     width:240px;
     margin-right: 30px;
     margin-bottom: 30px;
-    border: solid 1px  grey;
+    border:none;
     /*border:solid .75px #ddd;*/
     flex: 1 1 auto;  /*flow-grow, flex-shrink,flex-basis*/
     padding: .93em;
