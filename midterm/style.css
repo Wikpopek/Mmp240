@@ -30,7 +30,6 @@ header{
 }
 
 .logo{
- transform: translate(-80%,-50%);
  width: 470px;
  height: auto; 
  background-color: none;
