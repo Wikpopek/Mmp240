@@ -14,7 +14,7 @@
 header{
     padding: 4em 2em;
     background: 
-    url("images/epgr.jpg") no-repeat 200px bottom,
+    url("images/epgr.jpg") no-repeat  bottom,
     #000;
 }
 
@@ -30,9 +30,6 @@ header{
 }
 
 .logo{
- position: absolute; 
- top: 17%;
- left: 32%;
  transform: translate(-80%,-50%);
  width: 470px;
  height: auto; 
@@ -41,9 +38,6 @@ header{
 
 
 .text{
-    top: 35%;
-    left: 18.5%;
-    transform: translate(-50%,-50%);
     color: white;
     font-size: 22px;
     font-weight: lighter;
@@ -55,9 +49,6 @@ header{
 }
 
 .btn {
-    position: absolute;
-    top: 47%;
-    left: 2%;
     display: inline-block;
     background-color: rgb(58, 58, 58);
     color: rgb(255, 255, 255);
