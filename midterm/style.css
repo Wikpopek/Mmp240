@@ -6,6 +6,17 @@
     border:none;
 
 }*/
+#wrapper{
+    max-width: 1280px;
+    margin-right: auto;
+    margin-left: auto;
+}
+header{
+    padding: 4em 2em;
+    background: 
+    url("images/epgr.jpg") no-repeat 200px bottom,
+    #000;
+}
 
  .image-container{
     position: relative;
@@ -30,7 +41,6 @@
 
 
 .text{
-    position: absolute;
     top: 35%;
     left: 18.5%;
     transform: translate(-50%,-50%);
