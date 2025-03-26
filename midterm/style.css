@@ -6,7 +6,8 @@
     border:none;
 
 }*/
-#wrapper{
+
+    #wrapper{
     max-width: 1280px;
     margin-right: auto;
     margin-left: auto;
@@ -14,7 +15,7 @@
 header{
     padding: 4em 2em;
     background: 
-    url("images/epgr.jpg") no-repeat  bottom,
+    url("images/epgr.jpg") no-repeat center,
     #000;
 }
 
@@ -34,6 +35,8 @@ header{
  height: auto; 
  background-color: none;
  opacity: 1.0;}
+
+
 
 
 .text{
@@ -119,18 +122,20 @@ nav a{
     padding: .93em;
 }
 
-.episode-card :last-child {
+.episodes-card :last-child {
     margin-right:17px;
 }
 
-.episode-card img{
+.episodes-card img{
     max-width: 100%;
 }
 
-.episode-card p, .episode-card h4{
+.episodes-card p, .episode-card h4{
     padding-right: .93em;
     padding-left: .93em;
+    color: #000000;
 }
+
 
 
 
