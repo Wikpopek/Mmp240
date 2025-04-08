@@ -1,0 +1,13 @@
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+h1{
+    font-size: 1 rem;
+    text-transform:uppercase;
+}
+header{
+    display: flex;
+}
+#top-nav{
+    display:none;
+}
