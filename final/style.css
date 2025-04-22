@@ -1,6 +1,7 @@
 body{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    margin:5%;
+    margin:16px;
+    max-width: 1200px;
 }
 h1{
     font-size: 1 rem;
@@ -27,12 +28,12 @@ header{
     z-index: 100;
 }
 
-#top-nav ul{
+#top-nav ul a{
     padding:0;
     list-style-type: none;
     border-bottom: solid 1px #000;
 }
-#top-nav input{
+#top-nav li{
     display: block;
     margin: 10px 5px ;
 }
@@ -42,7 +43,23 @@ header{
 
 /* program navigation*/
 
-.dropdown{
+li.dropdown ul{
     background-color: #6C757D;
+}
+
+/*position:absolute;*/
+
+li.dropdown :hover ul{
+    display: block;
+}
+
+.dropdown{
+    background-color: aquamarine;
+    margin-bottom: 1em;
+    
+}
+
+.dropdown ul{
+    background-color: #fff;
 }
 
