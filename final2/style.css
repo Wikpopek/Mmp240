@@ -63,7 +63,7 @@ list-style-type: none;
 }
 
 .dropdown ul{
-    background-color: #fff;
+    background-color: #000000;
     display: none;
 }
 
@@ -84,8 +84,13 @@ li.dropdown:hover ul{
 .dropdown{
     background-color: rgb(135, 180, 242);
     margin-bottom: 1em;
-    border-radius:10px;
-
+    border-radius: 10px;
+    }
+.dropdown a{
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    padding: 5px;
 }
 
 .dropdown ul{
@@ -174,4 +179,26 @@ article img{
 .hero{
     padding:4em 2 em;
 }
+/* program menu for large screen */
+
+.programs-menu{
+    position: relative;
+    display: flex;
+    justify-content: space-between;}
+
+
+.dropdown{ width: 32%;
+position: relative;}
+
+.dropdown hover{
+    border-radius: 10px 10px 0 0;
+}
+
+.dropdown ul{
+position: absolute;
+width: 32%;
+
+}
+
+
 }
