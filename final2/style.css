@@ -1,0 +1,159 @@
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    max-width: 1200px;
+    margin:16px;
+}
+
+.btn{
+    color:#fff;
+    background-color: blue;
+    text-decoration:none;
+    padding: 0.5em 1em;
+    border-radius:10px;
+    display:inline-block;
+}
+
+h1{
+    font-size:1rem;
+    text-transform: uppercase;
+}
+
+header{
+    position: relative;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+/*top navigation*/
+
+nav li{
+padding:0;
+list-style-type: none;
+}
+
+#top-nav{
+   display:none;
+    position:absolute;
+    right:0px;
+    top:50px;
+    border:solid 2px;
+    padding:10px;
+    
+
+}
+
+#top-nav ul a{
+    padding:5px;
+    display:block;
+    border-bottom: solid 1px #000;
+}
+
+#top-nav li{
+    display:block;
+    padding:5px;
+    border-bottom: solid 1px #000;
+}
+
+.material-symbols-outlined{
+    float:right;
+
+}
+
+.dropdown ul{
+    background-color: #fff;
+    display: none;
+}
+
+li.dropdown ul{
+    display:none;
+}
+
+
+    
+    /*position:absolute;*/
+
+
+li.dropdown:hover ul{
+    display:block;
+    
+}
+
+.dropdown{
+    background-color: aquamarine;
+    margin-bottom: 1em;
+}
+
+.dropdown ul{
+    background-color: #fff;
+}
+
+/*typography design*/
+
+h1{
+    font-size:1rem;
+    text-transform: uppercase;
+}
+
+h1 a{
+    text-decoration: none;
+    color:#000;
+}
+
+section h2{
+    font-size:1rem;text-transform: uppercase;
+
+}
+
+article h3{
+    font-size: 1rem;
+
+}
+
+article{
+    color:#000;
+    margin-bottom:3em;
+}
+
+.hero h3 {font-size:1rem;
+}
+
+.hero{
+    background: url("img/queens2.jpg") no-repeat center;
+    padding:2em;
+    color:white;
+    margin-bottom: 2em;
+    margin-top: 2em;
+}
+
+.hero p{
+    background-color: rgba(0, 0, 0, 0.3);
+    padding:1em;
+}
+
+article img{
+    max-width:100%
+}
+
+/*media query*/
+
+@media (min-width:768px) {
+    .material-symbols-outlined{
+        display: none;}
+
+#top-nav{
+    display:flex;
+    position:static;
+    border:none;
+}
+
+#top-nav ul{
+    display:flex;
+    align-items: center;
+}
+
+#top-nav li{
+    margin:0 1em;
+
+}

@@ -17,16 +17,22 @@ header{
 
 /* top navigation */
 
+nav li{
+    padding: 0;
+    list-style-type: none;
+}
+
 #top-nav{
-    display:none;
+    display: none;
     position: absolute;
-    right: 16px;
+    right: 0;
     top: 50px;
-    border:solid 1px #000;
+    border:solid 1px #d1d1d1;
     padding:10px;
     background-color: #fff;
-    z-index: 100;
+
 }
+
 
 #top-nav ul a{
     padding:0;
@@ -41,20 +47,22 @@ header{
     float: right;
 }
 
-/* program navigation*/
-
-li.dropdown ul{
-    background-color: #6C757D;
+.dropdown ul{
+    background-color: #fff;
+    display: none;
 }
 
+ .dropdown ul{
+    display: none;
+}
 /*position:absolute;*/
 
-li.dropdown :hover ul{
+li.dropdown:hover ul{
     display: block;
 }
 
 .dropdown{
-    background-color: aquamarine;
+    background-color: rgb(234, 183, 89);
     margin-bottom: 1em;
     
 }
@@ -62,4 +70,70 @@ li.dropdown :hover ul{
 .dropdown ul{
     background-color: #fff;
 }
+/*typography design*/
+
+h1{
+    font-size:1rem;
+    text-transform: uppercase;
+}
+
+h1 a{
+    text-decoration: none;
+    color:#000;
+}
+
+section h2{
+    font-size:1rem;text-transform: uppercase;
+
+}
+
+article h3{
+    font-size: 1rem;
+
+}
+
+article{
+    color:#000;
+    margin-bottom:3em;
+}
+
+.hero h3 {font-size:1rem;
+}
+
+.hero{
+    background: url("img/wp8774869.jpg") no-repeat;
+    padding:2em;
+    color:white;
+    margin-bottom: 2em;
+    margin-top: 2em;
+    background-size: cover;
+}
+
+.hero p{
+    background-color: (#000)}
+
+article img{
+    max-width:100%}
+
+.btn{
+    color:#fff;
+    background-color: blue;
+    text-decoration:none;
+    padding: 0.5em 1em;
+    border-radius:10px;
+    display:inline-block;
+}
+
+@media (min-width:768px){
+    .material-symbols-outlined{
+        display: none;}
+    }
+    #top-nav ul{
+        display: flex;
+    }
+    #top-nav ul a{
+        border: none;
+    }
+
+
 
