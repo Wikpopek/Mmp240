@@ -23,6 +23,7 @@ header{
     display:flex;
     justify-content: space-between;
     align-items: center;
+
     
 }
 
@@ -81,12 +82,15 @@ li.dropdown:hover ul{
 }
 
 .dropdown{
-    background-color: rgb(9, 29, 103);
+    background-color: rgb(135, 180, 242);
     margin-bottom: 1em;
+    border-radius:10px;
+
 }
 
 .dropdown ul{
     background-color: #fff;
+
 }
 
 /*typography design*/
@@ -144,6 +148,7 @@ article img{
 
 #top-nav{
     display:flex;
+    align-items: center;
     position:static;
     border:none;
     position: static;
@@ -157,5 +162,16 @@ article img{
 #top-nav li{
     margin:0 1em;
 
+}
+#top-nav ul a{
+    display: block;
+    padding:1em;
+    border-bottom: none;
+}
+#top-nav ul li{
+    border: none;
+}
+.hero{
+    padding:4em 2 em;
 }
 }
