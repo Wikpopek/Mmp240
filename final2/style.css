@@ -6,7 +6,7 @@ body{
 
 .btn{
     color:#fff;
-    background-color: blue;
+    background-color: rgb(237, 112, 39);
     text-decoration:none;
     padding: 0.5em 1em;
     border-radius:10px;
@@ -81,7 +81,7 @@ li.dropdown:hover ul{
 }
 
 .dropdown{
-    background-color: aquamarine;
+    background-color: rgb(9, 29, 103);
     margin-bottom: 1em;
 }
 
@@ -120,7 +120,7 @@ article{
 }
 
 .hero{
-    background: url("img/queens2.jpg") no-repeat center;
+    background: url("img/ggg.webp") no-repeat top;
     padding:2em;
     color:white;
     margin-bottom: 2em;
@@ -140,12 +140,13 @@ article img{
 
 @media (min-width:768px) {
     .material-symbols-outlined{
-        display: none;}
+        display:none;}
 
 #top-nav{
     display:flex;
     position:static;
     border:none;
+    position: static;
 }
 
 #top-nav ul{
@@ -156,4 +157,5 @@ article img{
 #top-nav li{
     margin:0 1em;
 
+}
 }
