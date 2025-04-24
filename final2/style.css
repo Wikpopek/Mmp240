@@ -187,8 +187,7 @@ article img{
     justify-content: space-between;}
 
 
-.dropdown{ width: 32%;
-position: relative;}
+.dropdown{ width: 32%;}
 
 .dropdown hover{
     border-radius: 10px 10px 0 0;
@@ -196,9 +195,12 @@ position: relative;}
 
 .dropdown ul{
 position: absolute;
-width: 32%;
-
+width: 32%;}
 }
+/*maid grid*/
 
-
+.home main{
+    display: grid;
+    grid-template-columns: 2fr 1fr ;
+    grid-gap: 2em;
 }
