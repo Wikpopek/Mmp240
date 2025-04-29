@@ -96,6 +96,7 @@ li.dropdown:hover ul{
     text-decoration: none;
     color: #fff;
     padding: 5px;
+    background-color: rgb(135, 180, 242);
 }
 
 .dropdown ul{
@@ -209,5 +210,13 @@ width: 32%;}
 .home main{
     display: grid;
     grid-template-columns: 2fr 1fr ;
+    grid-gap: 2em;
+}
+
+/* home main */
+
+.home main{
+    display: grid;
+    grid-template-columns:minmax(500px,fr) 300px ;
     grid-gap: 2em;
 }
