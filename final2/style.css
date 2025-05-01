@@ -151,8 +151,42 @@ article{
 article img{
     max-width:100%
 }
+/* Program Cards*/
+.card{
+    border: solid 1px #6C757D;
+ border-radius: 10px;
+}
+.card:hover{
+    background-color: azure;
+    box-shadow: 5px 10px 5px #595959 ; /* X shift, Y shift, blur, color */
+}
+.card-body{
+    padding: 1em;
+}
 
+.card img{
+    border-radius: 10px 10px 0 0;
+}
+.card h3{
+    font-size: 1em ;
+    text-transform: uppercase;
+    margin-bottom: 0;
+}
+.card h2{
+    font-size: 1.5em;
+}
 /*media query*/
+
+.responsive-img{
+    width: 100%;
+}
+
+.no-underline{
+    text-decoration: none;
+}
+.c-black{
+    color: black;
+}
 
 @media (min-width:768px) {
     .material-symbols-outlined{
@@ -221,3 +255,4 @@ width: 32%;}
     grid-template-columns:minmax(500px,fr) 300px ;
     grid-gap: 2em;
 }
+/* end of the media qu
