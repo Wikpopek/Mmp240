@@ -65,6 +65,7 @@ list-style-type: none;
 .material-symbols-outlined{
     float:right;
 
+
 }
 
 .dropdown ul{
@@ -87,7 +88,7 @@ li.dropdown:hover ul{
 }
 
 .dropdown{
-    background-color: rgb(135, 180, 242);
+    background-color: rgb(187, 209, 239);
     margin-bottom: 1em;
     border-radius: 10px;
     }
@@ -96,7 +97,7 @@ li.dropdown:hover ul{
     text-decoration: none;
     color: #fff;
     padding: 5px;
-    background-color: rgb(135, 180, 242);
+    background-color: rgb(107, 151, 213);
 }
 
 .dropdown ul{

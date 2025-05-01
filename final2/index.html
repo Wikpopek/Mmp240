@@ -15,8 +15,8 @@
         <header>
             
             <h1><a href="index.html">Design @ CUNY</a></h1>
-            <span class="material-symbols-outlined">
-                menu
+          <span class="material-symbols-outlined" onclick="showMenu();">
+             menu
             </span>
 
             <nav id="top-nav">
@@ -53,10 +53,11 @@
             </li>           <!--closing li dropdown-->
 
             <li class="dropdown">
-                <a href="#">Degree</a>
                 <span class="material-symbols-outlined">
+
                     arrow_drop_down
                 </span>
+                <a href="#">Degree</a>
                 <ul>
                 <li><a href="associate.html">Associates Degree</a></li>
                 <li><a href="bachelors.html">Bachelors Degree</a></li>
@@ -65,10 +66,11 @@
             </li> <!--closing li dropdown-->
 
             <li class="dropdown">
-                <a href="#">Borough</a>
+                
                 <span class="material-symbols-outlined">
                     arrow_drop_down
                 </span>
+                <a href="#">Borough</a>
                 <ul>
                     <li><a href="bronx.html">Bronx</a></li>
                 <li><a href="brooklyn.html">Brooklyn</a></li>
@@ -139,7 +141,7 @@
 
     </footer>
 
-   </div> 
-
+   </div> <!--#wrapper-->
+   <script src="showMenu.js"></script>
 </body>
 </html>
