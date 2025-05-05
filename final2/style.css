@@ -155,10 +155,16 @@ article img{
 .card{
     border: solid 1px #6C757D;
  border-radius: 10px;
-}
+ 
+ transition:
+ box-shadow 1s,
+ transform 2s;
+ }
+ 
 .card:hover{
     background-color: azure;
     box-shadow: 5px 10px 5px #595959 ; /* X shift, Y shift, blur, color */
+    transform: rotate(1deg);
 }
 .card-body{
     padding: 1em;
