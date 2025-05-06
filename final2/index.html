@@ -9,13 +9,15 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
-    
+
+    <body class="programs">
     <div id="wrapper">
         <header>
             
-            <h1><a href="index.html"></a>Design @ CUNY</h1>
-            <span class="material-symbols-outlined"> menu</span>
+            <h1><a href="index.html">Design @ CUNY</a></h1>
+          <span class="material-symbols-outlined" onclick="showMenu();">
+             menu
+            </span>
 
             <nav id="top-nav">
                 <ul>
@@ -24,34 +26,38 @@
                     <li><a href="https://www.cuny.edu/admissions/apply-to-cuny/">Apply</a></li>
 
                 </ul>
-                <form action=""><input type="search" value="search">
+                <form action="#"><input type="search" value="search">
                 </form>
             </nav>
-        </div> <!-- closing .menuwraper-->
         </header>
          <!--Starting program navigation-->
 
-         <nav class="programs-nav">
+     <nav class="programs-nav">
             <h2>Find a Design Program</h2>
             <h4>Search By:</h4>
+            <ul class="programs-menu">
             <li class="dropdown">
-                <a href="#">Discipline</a>
                 <span class="material-symbols-outlined">
                     arrow_drop_down
                 </span>
+            
+                <a href="#">Discipline</a>
+        
                 
                 <ul>
                     <li><a href="digital-design.html">Digital Design</a></li>
                     <li><a href="animation.html">Animation</a></li>
                     <li><a href="Industrial-design.html">Industrial Design</a></li>
                 </ul>
+            
             </li>           <!--closing li dropdown-->
 
             <li class="dropdown">
-                <a href="#">Degree</a>
                 <span class="material-symbols-outlined">
+
                     arrow_drop_down
                 </span>
+                <a href="#">Degree</a>
                 <ul>
                 <li><a href="associate.html">Associates Degree</a></li>
                 <li><a href="bachelors.html">Bachelors Degree</a></li>
@@ -60,10 +66,11 @@
             </li> <!--closing li dropdown-->
 
             <li class="dropdown">
-                <a href="#">Borough</a>
+                
                 <span class="material-symbols-outlined">
                     arrow_drop_down
                 </span>
+                <a href="#">Borough</a>
                 <ul>
                     <li><a href="bronx.html">Bronx</a></li>
                 <li><a href="brooklyn.html">Brooklyn</a></li>
@@ -73,7 +80,9 @@
                 </ul>
 
             </li> <!--closing li dropdown-->
+             </ul>
         </nav>
+
 
 
 
@@ -110,7 +119,7 @@
         <section class="events">
             <h2>Events</h2>
             <article>
-                <img src="">
+                <img src="img/image1.png" alt="events">
                 <h3> Virtual Digital Design Showcase Day</h3>
                 <p>
                     Date: June 18, 2020
