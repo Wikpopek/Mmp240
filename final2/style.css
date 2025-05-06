@@ -159,6 +159,8 @@ article img{
  transition:
  box-shadow 1s,
  transform 2s;
+ 
+
  }
  .card img{ 
     border-radius: 10px 10px 0 0;
@@ -268,5 +270,11 @@ width: 32%;}
     display: grid;
     grid-template-columns:minmax(500px,fr) 300px ;
     grid-gap: 2em;
+}
+
+.programs-cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px, 1fr));
+    grid-gap: 1em;
 }
 /* end of the media qu
