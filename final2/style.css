@@ -160,7 +160,10 @@ article img{
  box-shadow 1s,
  transform 2s;
  }
- 
+ .card img{ 
+    border-radius: 10px 10px 0 0;
+ }
+
 .card:hover{
     background-color: azure;
     box-shadow: 5px 10px 5px #595959 ; /* X shift, Y shift, blur, color */
@@ -180,6 +183,11 @@ article img{
 }
 .card h2{
     font-size: 1.5em;
+}
+.card h4{
+    margin: 0;
+    font-weight: normal;
+    font-size: 1em;
 }
 /*media query*/
 
