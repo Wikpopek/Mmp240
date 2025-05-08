@@ -1,297 +1,313 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=arrow_drop_down,menu" />
-   
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Design @ CUNY</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+  <link rel="stylesheet" href="style.css" />
 </head>
+<body class="programs">
+  <div id="wrapper">
+    <header>
+      <h1><a href="index.html">Design @ CUNY</a></h1>
+      <span class="material-symbols-outlined" onclick="showMenu();">menu</span>
 
+      <nav id="top-nav">
+        <ul>
+          <li><a href="https://www.cuny.edu/about/">About CUNY</a></li>
+          <li><a href="https://www.cuny.edu/financial-aid/">Financial Aid</a></li>
+          <li><a href="https://www.cuny.edu/admissions/apply-to-cuny/">Apply</a></li>
+        </ul>
+        <form action="#"><input type="search" placeholder="Search" /></form>
+      </nav>
+    </header>
 
-    <body class="programs">
-    <div id="wrapper">
-        <header>
-            
-            <h1><a href="index.html">Design @ CUNY</a></h1>
-          <span class="material-symbols-outlined" onclick="showMenu();">
-             menu
-            </span>
+    <!-- Program navigation -->
+    <nav class="programs-nav">
+      <h2>Find a Design Program</h2>
+      <h4>Search By:</h4>
+      <ul class="programs-menu">
+        <li class="dropdown">
+          <span class="material-symbols-outlined">arrow_drop_down</span>
+          <a href="#">Discipline</a>
+          <ul>
+            <li><a href="digital-design.html">Digital Design</a></li>
+            <li><a href="animation.html">Animation</a></li>
+            <li><a href="industrial-design.html">Industrial Design</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <span class="material-symbols-outlined">arrow_drop_down</span>
+          <a href="#">Degree</a>
+          <ul>
+            <li><a href="associate.html">Associate's Degree</a></li>
+            <li><a href="bachelors.html">Bachelor's Degree</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <span class="material-symbols-outlined">arrow_drop_down</span>
+          <a href="#">Borough</a>
+          <ul>
+            <li><a href="bronx.html">Bronx</a></li>
+            <li><a href="brooklyn.html">Brooklyn</a></li>
+            <li><a href="manhattan.html">Manhattan</a></li>
+            <li><a href="queens.html">Queens</a></li>
+            <li><a href="statenisland.html">Staten Island</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
 
-            <nav id="top-nav">
-                <ul>
-                    <li><a href="https://www.cuny.edu/about/">About CUNY</a></li>
-                    <li><a href="https://www.cuny.edu/financial-aid/">Financial Aid</a></li>
-                    <li><a href="https://www.cuny.edu/admissions/apply-to-cuny/">Apply</a></li>
-
-                </ul>
-                <form action="#"><input type="search" value="search">
-                </form>
-            </nav>
-        </header>
-         <!--Starting program navigation-->
-
-         <nav class="programs-nav">
-            <h2>Find a Design Program</h2>
-            <h4>Search By:</h4>
-            <ul class="programs-menu">
-            <li class="dropdown">
-                <span class="material-symbols-outlined">
-                    arrow_drop_down
-                </span>
-            
-                <a href="#">Discipline</a>
-        
-                
-                <ul>
-                    <li><a href="digital-design.html">Digital Design</a></li>
-                    <li><a href="animation.html">Animation</a></li>
-                    <li><a href="Industrial-design.html">Industrial Design</a></li>
-                </ul>
-            
-            </li>           <!--closing li dropdown-->
-
-            <li class="dropdown">
-                <span class="material-symbols-outlined">
-
-                    arrow_drop_down
-                </span>
-                <a href="#">Degree</a>
-                <ul>
-                <li><a href="associate.html">Associates Degree</a></li>
-                <li><a href="bachelors.html">Bachelors Degree</a></li>
-                </ul>
-
-            </li> <!--closing li dropdown-->
-
-            <li class="dropdown">
-                
-                <span class="material-symbols-outlined">
-                    arrow_drop_down
-                </span>
-                <a href="#">Borough</a>
-                <ul>
-                    <li><a href="bronx.html">Bronx</a></li>
-                <li><a href="brooklyn.html">Brooklyn</a></li>
-                <li><a href="manhattan.html">Manhattan</a></li>
-                <li><a href="queens.html">Queens</a></li>
-                <li><a href="statenisland.html">Staten Island</a></li>
-                </ul>
-
-            </li> <!--closing li dropdown-->
-             </ul>
-        </nav>
-<!--ending program navigation-->
-<div>
-            <p>Queens College Ranked in Top 25 of Best Public Colleges and Universities for Graphic Design in the Nation </p>
-            <a href="https://www.cuny.edu/admissions/apply-to-cuny/" class="btn">Apply Now</a>
-        </div>              
-
-    
-
-<!-- starting hero baner-->
-
+    <div class="highlight">
+      <p>Queens College Ranked in Top 25 of Best Public Colleges and Universities for Graphic Design in the Nation</p>
+      <a href="https://www.cuny.edu/admissions/apply-to-cuny/" class="btn">Apply Now</a>
+    </div>
 
     <main>
-       <h2>Digital Design</h2>
-       <div class="programs-cards">
+      <h2>Digital Design</h2>
+      <div class="programs-cards">
 
-        <a  class="no-underline c-black" href="http://www.bmcc.cuny.edu/media-arts/ani_program.jsp" target="new">
-       <div class="card">
-        <img src="img/ccc.jpg" alt="ANI Image" class="responsive-img">
-        <div class="card-body">
-        <h3>Borough of Manhattan Community Collage </h3>
-        <h2>Animation and Motion Graphic A.S. </h2>
-        <p>The Animation and Motion Graphics program provides students with the fundamentals of two- and three-dimensional (2D and 3D) animation, motion graphics, and special effects for advertising campaigns, video games, movies, and television.</p>
-</div>
-</div>    
-       </a>
-
-       <div class="programs-cards">
-
-        <a  class="no-underline c-black" href="http://www.bmcc.cuny.edu/media-arts/mmp_program.jsp" target="new">
-       <div class="card">
-        <img src="img/aaa.jpg" alt="MMD Image" class="responsive-img">
-        <div class="card-body">
-        <h3>Borough of Manhattan Community Collage </h3>
-        <h2>Multimedia Programming and Design A.S. </h2>
-        <p>The Multimedia Programming and Design Program prepares students for careers in a variety of multimedia industries, companies and institutions that develop, produce or market multimedia products, programs or services.</p>
-</div>
-</div>    
-       </a>
-       <div class="programs-cards">
-
-        <a  class="no-underline c-black" href="http://www.bcc.cuny.edu/academics/academic-departments/art-and-music-department/degree-and-certificate-programs-courses/digital-design/" target="new">
-       <div class="card">
-        <img src="img/eee.jpg" alt="DDI Image" class="responsive-img">
-        <div class="card-body">
-        <h3>Bronx Community Collage </h3>
-        <h2>Digital Design A.A.S.</h2>
-        <p>This program prepares students for careers in the visual communication industry in positions such as graphic design, web design, computer animation, 3D graphic visualization, motion graphics design and interactive multimedia design.</p>
-</div>
-</div>    
-       </a>
-    </a>
-    
-
-     <a  class="no-underline c-black" href="https://www.hostos.cuny.edu/www-hostosdesign-com" target="new">
-    <div class="card">
-     <img src="img/fff.jpg" alt="DAN Image " class="responsive-img">
-     <div class="card-body">
-     <h3>Hostos Community Collage </h3>
-     <h2>Digital Design and Animation A.S.</h2>
-     <p>Through lectures and studio-based classes the Digital Design and Animation Program provides students with a strong foundation for future occupations in motion graphics, animation, graphic design and/or web design. </p>
-</div>    
-    </a>
-    <a  class="no-underline c-black" href="https://www.hostos.cuny.edu/Administrative-Offices/Office-of-Academic-Affairs/Departments/Humanities/Programs/Game-Design-(1)" target="new">
-        <div class="card">
-         <img src="img/hhh.png" alt="MMD Image" class="responsive-img">
-         <div class="card-body">
-         <h3>Hostos Community Collage </h3>
-         <h2>Game Design A.S. </h2>
-         <p>The Associate degree in Game Design will provide students with a strong foundation for future occupations in the entertainment software industry. It will provide students with additional career opportunities in the field of entertainment software publishing. </p>
-    </div>    
-        </a>
-        <a  class="no-underline c-black" href="https://www.kbcc.cuny.edu/academicdepartments/art/Animation.html" target="new">
+        <a class="no-underline c-black" href="http://www.bmcc.cuny.edu/media-arts/ani_program.jsp" target="_blank">
             <div class="card">
-             <img src="img/ddd.jpg" alt="ANIK Image" class="responsive-img">
-             <div class="card-body">
-             <h3>Kingsborough Community College </h3>
-             <h2>Animation A.S. </h2>
-             <p>The Animation concentration is part of the Graphic Design and Illustration major. Students learn traditional, hand-drawn animation in a digital environment, as well as storyboarding and 3D animation. </p>
-        </div>    
-            </a>
-            <a  class="no-underline c-black" href="https://www.hostos.cuny.edu/www-hostosdesign-com" target="new">
-                <div class="card">
-                 <img src="img/llll.jpg" alt="GDAI Image" class="responsive-img">
-                 <div class="card-body">
-                 <h3>Kingsborough Community College </h3>
-                 <h2>Graphic Design & Illustration A.S. </h2>
-                 <p>The Art Department at Kingsborough Community College is dedicated to providing a comprehensive program of study in the visual arts, designed to prepare students of diverse life experience for either continued baccalaureate study or immediate entry into a range of visual art professions. </p>
-            </div>    
-                </a>
-                <a  class="no-underline c-black" href="https://www.kbcc.cuny.edu/academicdepartments/art/Graphic-Design-and-Illustration.html" target="new">
-                    <div class="card">
-                     <img src="img/vvv.jpg" alt="DDK Image" class="responsive-img">
-                     <div class="card-body">
-                     <h3>Kingsborough Community College </h3>
-                     <h2>Digital Design A.S.</h2>
-                     <p>The Art Department at Kingsborough Community College is dedicated to providing a comprehensive program of study in the visual arts, designed to prepare students of diverse life experience for either continued baccalaureate study or immediate entry into a range of visual art professions. </p>
-                </div>    
-                    </a>
-                    <a  class="no-underline c-black" href="https://www.kbcc.cuny.edu/academicdepartments/art/UX-Design.html" target="new">
-                        <div class="card">
-                         <img src="img/art-video.png" alt="UXK Image" class="responsive-img">
-                         <div class="card-body">
-                         <h3>Kingsborough Community College </h3>
-                         <h2>UX Design A.S. </h2>
-                         <p>The Art Department at Kingsborough Community College is dedicated to providing a comprehensive program of study in the visual arts, designed to prepare students of diverse life experience for either continued baccalaureate study or immediate entry into a range of visual art professions. </p>
-                    </div>    
-                        </a>
-                        <a  class="no-underline c-black" href="https://www.laguardia.edu/majors/industrial-design/" target="new">
-                            <div class="card">
-                             <img src="img/Industrial-Design.jpg" alt="LGC Image" class="responsive-img">
-                             <div class="card-body">
-                             <h3>LaGuardia Community College </h3>
-                             <h2>Industrial Design A.A.S.</h2>
-                             <p>The Industrial Design program provides students a foundation experience in the necessary skills to begin a career in Computer Assisted Design (CAD), Model making, Product Design and Fabrication or transfer to a four-year institution. </p>
-                        </div>    
-                            </a>
-                            <a  class="no-underline c-black" href="https://www.laguardia.edu/new-media-technology/" target="new">
-                                <div class="card">
-                                 <img src="img/xxxxaaa.webp" alt="NMT Image" class="responsive-img">
-                                 <div class="card-body">
-                                 <h3>LaGuardia Community College </h3>
-                                 <h2>New Media Technology A.A.S. </h2>
-                                 <p>"The New Media Technology major offers students the opportunity to work and experiment with some of the exciting technologies available today.
-                                    Students develop a broad understanding of multimedia and Internet technologies in order to develop expertise in creating digital content." </p>
-                            </div>    
-                                </a>
-                                <a  class="no-underline c-black" href="https://www.qcc.cuny.edu/academics/degree-programs/digital-art-design.html" target="new">
-                                    <div class="card">
-                                     <img src="img/mmom.png" alt="DAD Image" class="responsive-img">
-                                     <div class="card-body">
-                                     <h3>Queensborough Community College </h3>
-                                     <h2>Digital Art and Design A.S.  </h2>
-                                     <p>The A.S. degree program in Digital Art and Design prepares students to enter the greatly expanding field of new media. In addition to four basic courses that provide a solid background in art, students take five courses in digital art and design, which develop computer skills for fine and applied arts.  </p>
-                                </div>    
-                                    </a>
-                                    <a  class="no-underline c-black" href="http://www.citytech.cuny.edu/mechanical/industrial-technology-aas.aspx" target="new">
-                                        <div class="card">
-                                         <img src="img/industriald.jpg" alt="IND Image" class="responsive-img">
-                                         <div class="card-body">
-                                         <h3>New York City College Of Technology</h3>
-                                         <h2>Industrial Design and Technology A.A.S. </h2>
-                                         <p>The Industrial Design Technology (IND) program is designed to provide students with a wide variety of skills enabling them to utilize a number of 2D, 3D and animation/simulation software packages in several diverse fields.  </p>
-                                    </div>    
-                                        </a>
-                                        <a  class="no-underline c-black" href="http://www.citytech.cuny.edu/communication-design/communication-design-aas.aspx" target="new">
-                                            <div class="card">
-                                             <img src="img/commd.jpeg" alt="CD Image" class="responsive-img">
-                                             <div class="card-body">
-                                             <h3>New York City College Of Technology</h3>
-                                             <h2>Communication Design </h2>
-                                             <p>The AAS degree program in Communication Design provides students with a solid foundation in the theory and practices of the Communication Design profession and a grounding in general education. Students explore visual expression through a range of courses in drawing, design and web design.    </p>
-                                        </div>    
-                                            </a>
-                                            <a  class="no-underline c-black" href="http://www.citytech.cuny.edu/communication-design/communication-design-bfa.aspx" target="new">
-                                                <div class="card">
-                                                 <img src="img/bfa.jpg" alt="CDBFA Image" class="responsive-img">
-                                                 <div class="card-body">
-                                                 <h3>New York City College Of Technology</h3>
-                                                 <h2>Communication Design B.F.A. </h2>
-                                                 <p>The BFA degree develops students' abilities to frame, research and solve increasingly complex visual communication problems. Students develop a professional portfolio that  prepares them for employment as art directors, graphic designers, illustrators and web designers.    </p>
-                                            </div>    
-                                                </a>
-                                                <a  class="no-underline c-black" href="https://www.qc.cuny.edu/academics/art/design-bfa/" target="new">
-                                                    <div class="card">
-                                                     <img src="img/DESIGN.PNG" alt="MMD Image" class="responsive-img">
-                                                     <div class="card-body">
-                                                     <h3>Queens College</h3>
-                                                     <h2>Design B.F.A.</h2>
-                                                     <p>Queens College’s Design program combines knowledgeable faculty with industry standard software and the creativity of a studio-based learning environment. Students choose one of three concentrations: Communication Design, Animation & Illustration or Interaction Design.   </p>
-                                                </div>    
-                                                    </a>
-                                                    <a  class="no-underline c-black" href="https://www.ccny.cuny.edu/edm" target="new">
-                                                        <div class="card">
-                                                         <img src="img/digital1_banner.jpg" alt="MMD Image" class="responsive-img">
-                                                         <div class="card-body">
-                                                         <h3>The City College of New York</h3>
-                                                         <h2>Electronic Design and Multimedia B.F.A. </h2>
-                                                         <p>The Electronic Design & Multimedia prepares students for careers in design in traditional print and emerging electronic media. It offers one of the most comprehensive, affordable 4-year programs in electronic art at a New York City public university, and has a 18-year record of alumni success. </p>
-                                                    </div>    
-                                                        </a>
-                                                        <a  class="no-underline c-black" href="https://york-undergraduate.catalog.cuny.edu/programs/CT-MIN" target="new">
-                                                            <div class="card">
-                                                             <img src="img/19coursestop.jpg" alt="MMD Image" class="responsive-img">
-                                                             <div class="card-body">
-                                                             <h3>York College</h3>
-                                                             <h2>Communications Technology </h2>
-                                                             <p>An interdisciplinary program that brings together television, web, information systems, computer science, and design. The program offers three main concentrations: digital video, computer graphics, and systems and applications. </p>
-                                                        </div>    
-                                                            </a>
-                                                            <a  class="no-underline c-black" href="https://lehman-undergraduate.catalog.cuny.edu/programs/CGI-BS" target="new">
-                                                                <div class="card">
-                                                                 <img src="img/19coursestop.jpg" alt="MMD Image" class="responsive-img">
-                                                                 <div class="card-body">
-                                                                 <h3>Lehman College</h3>
-                                                                 <h2>Computer Graphics and Imaging </h2>
-                                                                 <p>The Computer Graphics and Imaging program offers courses covering web design, imaging, 3-D modeling, animation, interactivity, and broadcast design, preparing students for careers as well as graduate study in these fields.   </p>
-                                                            </div>    
-                                                                </a>
-                                                                <a  class="no-underline c-black" href="https://weissman.baruch.cuny.edu/weissman-academic-departments/areas-of-study/graphic-communication/" target="new">
-                                                                    <div class="card">
-                                                                     <img src="img/19coursestop.jpg" alt="MMD Image" class="responsive-img">
-                                                                     <div class="card-body">
-                                                                     <h3>Baruch College</h3>
-                                                                     <h2>Graphic Communication</h2>
-                                                                     <p>The graphic communication specialization provides training in graphics as well as basic training in the broader aspects of business communication. It prepares the graphic artist to enter a business environment.    </p>
-                                                                </div>    
-                                                                    </a>
-        <!-- card ends-->
-    <!-- card ends-->
-<main>
+              <img src="img/ccc.jpg" alt="ANI Image" class="responsive-img" />
+              <div class="card-body">
+                <h3>Borough of Manhattan Community College</h3>
+                <h2>Animation and Motion Graphic A.S.</h2>
+                <p>The Animation and Motion Graphics program provides students with the fundamentals of two- and three-dimensional (2D and 3D) animation, motion graphics, and special effects for advertising campaigns, video games, movies, and television.</p>
+              </div>
+            </div>
+          </a>
+          <a class="no-underline c-black" href="http://www.bmcc.cuny.edu/media-arts/mmp_program.jsp" target="_blank">
+            <div class="card">
+              <img src="img/aaa.jpg" alt="MMD Image" class="responsive-img" />
+              <div class="card-body">
+                <h3>Borough of Manhattan Community College</h3>
+                <h2>Multimedia Programming and Design A.S.</h2>
+                <p>The Multimedia Programming and Design Program prepares students for careers in a variety of multimedia industries, companies and institutions that develop, produce or market multimedia products, programs or services.</p>
+              </div>
+            </div>
+          </a>
+
+        <a class="no-underline c-black" href="http://www.bcc.cuny.edu/academics/academic-departments/art-and-music-department/degree-and-certificate-programs-courses/digital-design/" target="_blank">
+            <div class="card">
+              <img src="img/eee.jpg" alt="DD Image" class="responsive-img" />
+              <div class="card-body">
+                <h3>Bronx Community College</h3>
+                <h2>Digital Design A.A.S.</h2>
+                <p>This program prepares students for careers in the visual communication industry in positions such as graphic design, web design, computer animation, 3D graphic visualization, motion graphics design and interactive multimedia design.</p>
+              </div>
+            </div>
+          </a>
+
+          <a class="no-underline c-black" href="https://www.hostos.cuny.edu/Administrative-Offices/Office-of-Academic-Affairs/Departments/Humanities/Programs/Game-Design-(1)" target="_blank">
+            <div class="card">
+              <img src="img/fff.jpg" alt="DDA Image" class="responsive-img" />
+              <div class="card-body">
+                <h3>Hostos Community College</h3>
+                <h2>Digital Design & Animation A.S.</h2>
+                <p>Through lectures and studio-based classes the Digital Design and Animation Program provides students with a strong foundation for future occupations in motion graphics, animation, graphic design and/or web design. </p>
+              </div>
+            </div>
+          </a>
+
+        <a class="no-underline c-black" href="https://www.hostos.cuny.edu/www-hostosdesign-com" target="_blank">
+          <div class="card">
+            <img src="img/hhh.png" alt="GD Image" class="responsive-img" />
+            <div class="card-body">
+              <h3>Hostos Community College</h3>
+              <h2>Game Design A.S.</h2>
+              <p>Provides foundational skills for the entertainment software industry and opportunities in game publishing and development.</p>
+            </div>
+          </div>
+        </a>
+        <a class="no-underline c-black" href="https://www.kbcc.cuny.edu/academicdepartments/art/Animation.html" target="_blank">
+            <div class="card">
+              <img src="img/hhh.png" alt="ANI Image" class="responsive-img" />
+              <div class="card-body">
+                <h3>Kingsborough Community College</h3>
+                <h2>Animation A.S.</h2>
+                <p>The Animation concentration is part of the Graphic Design and Illustration major. Students learn traditional, hand-drawn animation in a digital environment, as well as storyboarding and 3D animation.</p>
+              </div>
+            </div>
+          </a>
+          <a class="no-underline c-black" href="https://www.kbcc.cuny.edu/academicdepartments/art/Animation.html" target="_blank">
+            <div class="card">
+              <img src="img/hhh.png" alt="Game Design Program" class="responsive-img" />
+              <div class="card-body">
+                <h3>Hostos Community College</h3>
+                <h2>Animation A.S.</h2>
+                <p>The Animation concentration is part of the Graphic Design and Illustration major. Students learn traditional, hand-drawn animation in a digital environment, as well as storyboarding and 3D animation.</p>
+              </div>
+            </div>
+          </a>
+          <a class="no-underline c-black" href="https://www.hostos.cuny.edu/Administrative-Offices/Office-of-Academic-Affairs/Departments/Humanities/Programs/Game-Design-(1)" target="_blank">
+            <div class="card">
+              <img src="img/hhh.png" alt="Game Design Program" class="responsive-img" />
+              <div class="card-body">
+                <h3>Hostos Community College</h3>
+                <h2>Game Design A.S.</h2>
+                <p>Provides foundational skills for the entertainment software industry and opportunities in game publishing and development.</p>
+              </div>
+            </div>
+          </a>
+          <a class="no-underline c-black" href="https://www.hostos.cuny.edu/Administrative-Offices/Office-of-Academic-Affairs/Departments/Humanities/Programs/Game-Design-(1)" target="_blank">
+            <div class="card">
+              <img src="img/hhh.png" alt="Game Design Program" class="responsive-img" />
+              <div class="card-body">
+                <h3>Hostos Community College</h3>
+                <h2>Game Design A.S.</h2>
+                <p>Provides foundational skills for the entertainment software industry and opportunities in game publishing and development.</p>
+              </div>
+            </div>
+          </a>
+          <a class="no-underline c-black" href="https://www.hostos.cuny.edu/Administrative-Offices/Office-of-Academic-Affairs/Departments/Humanities/Programs/Game-Design-(1)" target="_blank">
+            <div class="card">
+              <img src="img/hhh.png" alt="Game Design Program" class="responsive-img" />
+              <div class="card-body">
+                <h3>Hostos Community College</h3>
+                <h2>Game Design A.S.</h2>
+                <p>Provides foundational skills for the entertainment software industry and opportunities in game publishing and development.</p>
+              </div>
+            </div>
+          </a>
+          <a class="no-underline c-black" href="https://www.hostos.cuny.edu/Administrative-Offices/Office-of-Academic-Affairs/Departments/Humanities/Programs/Game-Design-(1)" target="_blank">
+            <div class="card">
+              <img src="img/hhh.png" alt="Game Design Program" class="responsive-img" />
+              <div class="card-body">
+                <h3>Hostos Community College</h3>
+                <h2>Game Design A.S.</h2>
+                <p>Provides foundational skills for the entertainment software industry and opportunities in game publishing and development.</p>
+              </div>
+            </div>
+          </a>
+          <a class="no-underline c-black" href="https://www.hostos.cuny.edu/Administrative-Offices/Office-of-Academic-Affairs/Departments/Humanities/Programs/Game-Design-(1)" target="_blank">
+            <div class="card">
+              <img src="img/hhh.png" alt="Game Design Program" class="responsive-img" />
+              <div class="card-body">
+                <h3>Hostos Community College</h3>
+                <h2>Game Design A.S.</h2>
+                <p>Provides foundational skills for the entertainment software industry and opportunities in game publishing and development.</p>
+              </div>
+            </div>
+          </a>
+          <a class="no-underline c-black" href="https://www.hostos.cuny.edu/Administrative-Offices/Office-of-Academic-Affairs/Departments/Humanities/Programs/Game-Design-(1)" target="_blank">
+            <div class="card">
+              <img src="img/hhh.png" alt="Game Design Program" class="responsive-img" />
+              <div class="card-body">
+                <h3>Hostos Community College</h3>
+                <h2>Game Design A.S.</h2>
+                <p>Provides foundational skills for the entertainment software industry and opportunities in game publishing and development.</p>
+              </div>
+            </div>
+          </a>
+          <a class="no-underline c-black" href="https://www.hostos.cuny.edu/Administrative-Offices/Office-of-Academic-Affairs/Departments/Humanities/Programs/Game-Design-(1)" target="_blank">
+            <div class="card">
+              <img src="img/hhh.png" alt="Game Design Program" class="responsive-img" />
+              <div class="card-body">
+                <h3>Hostos Community College</h3>
+                <h2>Game Design A.S.</h2>
+                <p>Provides foundational skills for the entertainment software industry and opportunities in game publishing and development.</p>
+              </div>
+            </div>
+          </a>
+          <a class="no-underline c-black" href="https://www.hostos.cuny.edu/Administrative-Offices/Office-of-Academic-Affairs/Departments/Humanities/Programs/Game-Design-(1)" target="_blank">
+            <div class="card">
+              <img src="img/hhh.png" alt="Game Design Program" class="responsive-img" />
+              <div class="card-body">
+                <h3>Hostos Community College</h3>
+                <h2>Game Design A.S.</h2>
+                <p>Provides foundational skills for the entertainment software industry and opportunities in game publishing and development.</p>
+              </div>
+            </div>
+          </a>
+          <a class="no-underline c-black" href="https://www.hostos.cuny.edu/Administrative-Offices/Office-of-Academic-Affairs/Departments/Humanities/Programs/Game-Design-(1)" target="_blank">
+            <div class="card">
+              <img src="img/hhh.png" alt="Game Design Program" class="responsive-img" />
+              <div class="card-body">
+                <h3>Hostos Community College</h3>
+                <h2>Game Design A.S.</h2>
+                <p>Provides foundational skills for the entertainment software industry and opportunities in game publishing and development.</p>
+              </div>
+            </div>
+          </a>
+          <a class="no-underline c-black" href="https://www.hostos.cuny.edu/Administrative-Offices/Office-of-Academic-Affairs/Departments/Humanities/Programs/Game-Design-(1)" target="_blank">
+            <div class="card">
+              <img src="img/hhh.png" alt="Game Design Program" class="responsive-img" />
+              <div class="card-body">
+                <h3>Hostos Community College</h3>
+                <h2>Game Design A.S.</h2>
+                <p>Provides foundational skills for the entertainment software industry and opportunities in game publishing and development.</p>
+              </div>
+            </div>
+          </a>
+          <a class="no-underline c-black" href="https://www.hostos.cuny.edu/Administrative-Offices/Office-of-Academic-Affairs/Departments/Humanities/Programs/Game-Design-(1)" target="_blank">
+            <div class="card">
+              <img src="img/hhh.png" alt="Game Design Program" class="responsive-img" />
+              <div class="card-body">
+                <h3>Hostos Community College</h3>
+                <h2>Game Design A.S.</h2>
+                <p>Provides foundational skills for the entertainment software industry and opportunities in game publishing and development.</p>
+              </div>
+            </div>
+          </a>
+          <a class="no-underline c-black" href="https://www.hostos.cuny.edu/Administrative-Offices/Office-of-Academic-Affairs/Departments/Humanities/Programs/Game-Design-(1)" target="_blank">
+            <div class="card">
+              <img src="img/hhh.png" alt="Game Design Program" class="responsive-img" />
+              <div class="card-body">
+                <h3>Hostos Community College</h3>
+                <h2>Game Design A.S.</h2>
+                <p>Provides foundational skills for the entertainment software industry and opportunities in game publishing and development.</p>
+              </div>
+            </div>
+          </a>
+          <a class="no-underline c-black" href="https://www.hostos.cuny.edu/Administrative-Offices/Office-of-Academic-Affairs/Departments/Humanities/Programs/Game-Design-(1)" target="_blank">
+            <div class="card">
+              <img src="img/hhh.png" alt="Game Design Program" class="responsive-img" />
+              <div class="card-body">
+                <h3>Hostos Community College</h3>
+                <h2>Game Design A.S.</h2>
+                <p>Provides foundational skills for the entertainment software industry and opportunities in game publishing and development.</p>
+              </div>
+            </div>
+          </a>
+          <a class="no-underline c-black" href="https://www.hostos.cuny.edu/Administrative-Offices/Office-of-Academic-Affairs/Departments/Humanities/Programs/Game-Design-(1)" target="_blank">
+            <div class="card">
+              <img src="img/hhh.png" alt="Game Design Program" class="responsive-img" />
+              <div class="card-body">
+                <h3>Hostos Community College</h3>
+                <h2>Game Design A.S.</h2>
+                <p>Provides foundational skills for the entertainment software industry and opportunities in game publishing and development.</p>
+              </div>
+            </div>
+          </a>
+          <a class="no-underline c-black" href="https://www.hostos.cuny.edu/Administrative-Offices/Office-of-Academic-Affairs/Departments/Humanities/Programs/Game-Design-(1)" target="_blank">
+            <div class="card">
+              <img src="img/hhh.png" alt="Game Design Program" class="responsive-img" />
+              <div class="card-body">
+                <h3>Hostos Community College</h3>
+                <h2>Game Design A.S.</h2>
+                <p>Provides foundational skills for the entertainment software industry and opportunities in game publishing and development.</p>
+              </div>
+            </div>
+          </a>
+          <a class="no-underline c-black" href="https://www.hostos.cuny.edu/Administrative-Offices/Office-of-Academic-Affairs/Departments/Humanities/Programs/Game-Design-(1)" target="_blank">
+            <div class="card">
+              <img src="img/hhh.png" alt="Game Design Program" class="responsive-img" />
+              <div class="card-body">
+                <h3>Hostos Community College</h3>
+                <h2>Game Design A.S.</h2>
+                <p>Provides foundational skills for the entertainment software industry and opportunities in game publishing and development.</p>
+              </div>
+            </div>
+          </a>
+
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Design @ CUNY. All rights reserved.</p>
+    </footer>
+  </div>
 </body>
 </html>
-        
