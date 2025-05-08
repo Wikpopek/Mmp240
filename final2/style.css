@@ -255,7 +255,7 @@ article img{
 .dropdown ul{
 position: absolute;
 width: 32%;}
-}
+
 /*maid grid*/
 
 .home main{
@@ -277,4 +277,5 @@ width: 32%;}
     grid-template-columns: repeat(auto-fit,minmax(250px, 1fr));
     grid-gap: 1em;
 }
-/* end of the media quer*/
+/* end of the media query*/
+}
