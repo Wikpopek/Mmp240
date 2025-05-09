@@ -1,7 +1,7 @@
 body {
         font-family: 'Georgia', serif;
         background-color: #f8f4f0;
-        color: #333;
+        color: #000000;
         max-width: 800px;
         margin: 0 auto;
         padding: 20px;
@@ -10,16 +10,21 @@ body {
 
     h1 {
         font-size: 2em;
-        color: #2c2c2c;
+        color: #000000;
         text-align: center;
         border-bottom: 2px solid #ccc;
         padding-bottom: 10px;
+        color: #000000;
     }
 
     h2 {
         font-size: 1.5em;
-        color: #5a5a5a;
+        color: #000000;
         text-align: center;
+        color-scheme: #BF604B;
+    }
+    p{
+        color: #000000;
     }
 
     img {
@@ -41,13 +46,13 @@ body {
     }
 
     a {
-        color: #6b4b3e;
+        color: #B250BF;
         text-decoration: none;
         font-weight: bold;
     }
 
     a:hover {
-        color: #a67963;
+        color: #BF604B;
         text-decoration: underline;
     }
 
@@ -58,24 +63,24 @@ body {
       display: grid;
      grid-template-columns: repeat(4, 1fr); /* 4 columns */
     gap: 20px;
-    max-width: 1000px;      /* ogranicza szerokość całego bloku */
-    margin: 40px auto;      /* wyśrodkowanie */
+    max-width: 1000px;      
+    margin: 40px auto;      
     justify-content: center;
 }
 
     
     .assignment-group {
-        background-color: #fff;
+        background-color: rgb(229, 209, 216);
         padding: 15px;
         border-radius: 10px;
-        flex: 1 1 220px; /* elastyczna szerokość */
+        flex: 1 1 220px; 
         min-width: 200px;
         max-width: 300px;
         box-shadow: 0 4px 8px rgba(0,0,0,0.05);
     }
     
     .assignment-group h3 {
-        color: #3f3f3f;
+        color: #000000;
         border-left: 4px solid #a67963;
         padding-left: 10px;
         margin-top: 0;
@@ -100,6 +105,33 @@ body {
         text-decoration: underline;
         color: #a67963;
     }
+    p {
+        font-size: 18px;
+        line-height: 1.6;
+    }
+    .assignment-group h3::before {
+        content: '♥'; 
+        color: #BF571B;  
+        font-size: 18px; 
+        margin-right: 10px; 
+    }
+    
+
+    
+
+    .style-box {
+        background-color: #ddc3c3; 
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+        color: #7a7878;
+        max-width: 800px;
+        margin: 0 auto 40px auto;
+        line-height: 1.6;
+        
+    }
+    
+    
     
     
     
