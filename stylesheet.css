@@ -61,7 +61,7 @@ p {
 }
 .assignments {
   display: grid;
- grid-template-columns: repeat(4, 1fr); /* 4 columns */
+ grid-template-columns: repeat(5, 1fr); /* 4 columns */
 gap: 20px;
 max-width: 1000px;      
 margin: 40px auto;      
