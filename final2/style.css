@@ -151,6 +151,11 @@ article{
 article img{
     max-width:100%
 }
+
+
+
+
+
 /* Program Cards*/
 .card{
     border: solid 1px #6C757D;
@@ -159,6 +164,8 @@ article img{
  transition:
  box-shadow 1s,
  transform 2s;
+          
+  
  
 
  }
