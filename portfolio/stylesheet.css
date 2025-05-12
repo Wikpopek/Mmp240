@@ -1,27 +1,27 @@
-/* Resetowanie marginesów i paddingu */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Import czcionki Playfair Display */
+
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap');
 
-/* Styl dla całego ciała strony */
+
 body {
-    font-family: 'Playfair Display', serif; /* Ustawienie Playfair Display jako głównej czcionki */
+    font-family: 'Playfair Display', serif; 
     background-color: #f4f4f4;
     color: #333;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     min-height: 100vh;
-    margin-top: 0; /* Usunięcie marginesu u góry */
-    flex-direction: column; /* Pozycjonowanie wszystkich elementów w kolumnie */
+    margin-top: 0; 
+    flex-direction: column; 
 }
 
-/* Nagłówek */
+
 header {
     width: 100%;
     background-color: #f8f9fa;
@@ -31,7 +31,7 @@ header {
     z-index: 1000;
 }
 
-/* Navbar - poziome menu */
+
 .navbar {
     display: flex;
     justify-content: center;
@@ -41,19 +41,19 @@ header {
     margin-top: 60px;
 }
 
-/* Lista nawigacji */
+
 .nav {
     display: flex;
     justify-content: center;
     gap: 20px; 
 }
 
-/* Styl dla elementów nawigacji */
+
 .nav-item {
     list-style-type: none;
 }
 
-/* Styl dla linków nawigacyjnych */
+
 .nav-link {
     text-decoration: none;
     font-size: 1.2rem;
@@ -64,7 +64,7 @@ header {
     font-weight: bold;
 }
 
-/* Kontener sekcji 'about' */
+
 .about-section {
     display: flex;
     align-items: center;
@@ -78,7 +78,7 @@ header {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Kolumna dla zdjęcia */
+
 .profile-img {
     width: 250px; 
     height: 250px;
@@ -88,20 +88,20 @@ header {
     margin-bottom: 20px;
 }
 
-/* Kolumna dla tekstu */
+
 .profile-text {
     max-width: 500px;
     text-align: center;
 }
 
-/* Nagłówek */
+
 h2 {
     margin-bottom: 15px;
     font-size: 2rem;
     color: #333;
 }
 
-/* Akapit */
+
 p {
     margin-bottom: 20px;
     font-size: 1rem;
@@ -109,7 +109,7 @@ p {
     color: #666;
 }
 
-/* Przycisk */
+
 .btn {
     padding: 10px 20px;
     font-size: 1rem;
@@ -128,7 +128,7 @@ p {
     background-color: #555;
 }
 
-/* Styl responsywny dla ekranów mobilnych */
+
 @media (max-width: 768px) {
     .about-section {
         flex-direction: column;
@@ -148,9 +148,18 @@ p {
         max-width: 100%;
     }
 
-    /* Mniejsze odstępy nawigacyjne na urządzeniach mobilnych */
+    
     .nav {
         flex-direction: column;
         gap: 10px;
     }
+   
+.logo-img {
+    max-width: 250px; 
+    height: auto; 
+}
+
+    
+
+
 }
