@@ -1,4 +1,5 @@
 
+/* about page*/ 
 * {
     margin: 0;
     padding: 0;
@@ -159,7 +160,46 @@ p {
     height: auto; 
 }
 
-    
+/* contact page*/
+.contact-heading {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .curly-arrow {
+    font-size: 2rem;
+    color: #555;
+  }
+  
+  .contact-icons i {
+    font-size: 2.5rem; /* POWIĘKSZ ikony */
+    color: #333;
+    transition: color 0.3s;
+  }
+  
+  .contact-icons i:hover {
+    color: #007bff;
+  }
+  
+  .contact-container {
+    margin-top: 100px; /* PRZESUŃ całość niżej */
+  }
+  
+  .contact-icon {
+    text-decoration: none;
+  }
+  
 
+  
+  
+  
+  
+
+  
+  
+
+  
+  
+  
 
 }
