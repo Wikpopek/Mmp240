@@ -172,7 +172,7 @@ p {
   }
   
   .contact-icons i {
-    font-size: 2.5rem; /* POWIĘKSZ ikony */
+    font-size: 2.5rem; 
     color: #333;
     transition: color 0.3s;
   }
@@ -182,12 +182,29 @@ p {
   }
   
   .contact-container {
-    margin-top: 100px; /* PRZESUŃ całość niżej */
+    margin-top: 100px; 
   }
   
   .contact-icon {
     text-decoration: none;
   }
+  /* home page*/
+  body {
+    font-family: 'Playfair Display', serif;
+    background-color: #fff;
+    color: #333;
+  }
+  
+  .logo-img {
+    height: 60px;
+  }
+  
+  /* Możesz dodać efekt hover do linków nawigacyjnych */
+  .nav-link:hover {
+    color: #000;
+    text-decoration: underline;
+  }
+  
   
 
   
