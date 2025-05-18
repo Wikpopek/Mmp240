@@ -234,7 +234,7 @@ article img {
     color: black;
 }
 
-
+/* DUŻE EKRANY */
 @media (min-width: 768px) {
 
     #top-nav {
