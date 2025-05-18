@@ -197,9 +197,10 @@ article img {
 }
 
 .card {
-    border: solid 1px #6C757D;
+    border: solid 1px #ffffff;
     border-radius: 10px;
     transition: box-shadow 1s, transform 2s;
+    background-color: #d3d3d3; 
 }
 
 .card img {
@@ -207,10 +208,11 @@ article img {
 }
 
 .card:hover {
-    background-color: azure;
-    box-shadow: 5px 10px 5px #595959;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 5px 10px 5px #b29999;
     transform: rotate(1deg);
 }
+
 
 .card-body {
     padding: 1em;
