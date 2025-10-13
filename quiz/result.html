@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz Results</title>
+  <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Your Results </h1>
+    <div id="results"></div>
+    <button onclick="goBack()">Go back to Quiz</button>
+  </div>
+
+  <script>
+    const score = localStorage.getItem("quizScore");
+    const results = JSON.parse(localStorage.getItem("quizResults"));
+    const div = document.getElementById("results");
+
+    if (score !== null && results) {
+      let html = `<p>You got <strong>${score}/5</strong> correct!</p><ul>`;
+      let i = 1;
+      for (let key in results) {
+        html += `<li>Question ${i}: ${results[key] ? "✅ Correct" : "❌ Wrong"}</li>`;
+        i++;
+      }
+      html += "</ul>";
+      div.innerHTML = html;
+    } else {
+      div.innerHTML = `<p>No results found. Please take the quiz first.</p>`;
+    }
+
+    function goBack() {
+      window.location.href = "index.html"; // ← tu wpisz nazwę swojego quizu (np. quiz.html)
+    }
+   
+      function goBack() {
+        // usuń poprzedni wynik (żeby quiz zaczynał od zera)
+        localStorage.removeItem("quizScore");
+        localStorage.removeItem("quizResults");
+    
+        // przekieruj z powrotem do quizu
+        window.location.href = "quiz.html"; // <-- UPEWNIJ się, że twój plik z quizem nazywa się dokładnie "quiz.html"
+      }
+    
+    
+  </script>
+</body>
+</html>

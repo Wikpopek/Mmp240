@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me Quiz 💌</title>
+  <link rel="stylesheet" href="stylesheet.css">
+  <script src="script.js" defer></script> <!-- zakładam, że masz tu swoją funkcję submitQuiz() -->
+</head>
+<body>
+  <div class="container">
+    <h1>Short Quiz about me!</h1>
+
+    <form id="quizForm" onsubmit="event.preventDefault(); submitQuiz();">
+
+      <!-- Question 1 -->
+      <div class="question">
+        <p>1. Where was I born?</p>
+        <label><input type="radio" name="q1" value="usa"> USA</label>
+        <label><input type="radio" name="q1" value="poland"> Poland</label>
+        <label><input type="radio" name="q1" value="france"> France</label>
+      </div>
+
+      <!-- Question 2 -->
+      <div class="question">
+        <p>2. Why did I decide to come to the USA?</p>
+        <label><input type="radio" name="q2" value="life"> To experience life here</label>
+        <label><input type="radio" name="q2" value="education"> To grow educationally</label>
+        <label><input type="radio" name="q2" value="withhusband"> To grow together with my husband</label>
+        <label><input type="radio" name="q2" value="all"> All of the answers are correct</label>
+      </div>
+
+      <!-- Question 3 -->
+      <div class="question">
+        <p>3. Why should I be accepted to NYU?</p>
+        <label><input type="radio" name="q3" value="organized"> Because I’m organized</label>
+        <label><input type="radio" name="q3" value="smart"> Because I study well</label>
+        <label><input type="radio" name="q3" value="dream"> Because it’s my dream school</label>
+        <label><input type="radio" name="q3" value="fit"> Because I believe I’m an ambitious and fitting student</label>
+        <label><input type="radio" name="q3" value="all"> All of the answers are correct</label>
+      </div>
+
+      <!-- Question 4 -->
+      <div class="question">
+        <p>4. What is my favorite type of cuisine?</p>
+        <label><input type="radio" name="q4" value="italian"> Italian</label>
+        <label><input type="radio" name="q4" value="polish"> Polish</label>
+        <label><input type="radio" name="q4" value="thai"> Thai</label>
+        <label><input type="radio" name="q4" value="japanese"> Japanese</label>
+      </div>
+
+      <!-- Question 5 -->
+      <div class="question">
+        <p>5. Who do I want to become when I grow up?</p>
+        <label><input type="radio" name="q5" value="banker"> Banker</label>
+        <label><input type="radio" name="q5" value="nurse"> Nurse</label>
+        <label><input type="radio" name="q5" value="journalist"> Journalist</label>
+        <label><input type="radio" name="q5" value="media"> Work in media and become a UX/UI designer</label>
+      </div>
+
+      <button type="submit">Submit Quiz </button>
+    </form>
+  </div>
+</body>
+</html>

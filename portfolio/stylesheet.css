@@ -1,222 +1,229 @@
-
-/* about page*/ 
+/* Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
-
+  
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap');
-
-
+  
+/* Body */
 body {
-    font-family: 'Playfair Display', serif; 
-    background-color: #f4f4f4;
+    font-family: 'Playfair Display', serif;
+    background-color: #faf8f2;
     color: #333;
     display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
+    flex-direction: column;
     min-height: 100vh;
-    margin-top: 0; 
-    flex-direction: column; 
 }
-
-
+  
+/* Header */
 header {
     width: 100%;
-    background-color: #f8f9fa;
+    background-color: #fff;
     text-align: center;
     padding: 20px 0;
-    position: relative;
-    z-index: 1000;
 }
-
-
+  
+.logo-img {
+    max-width: 200px;
+    height: auto;
+}
+  
+/* Navbar */
 .navbar {
     display: flex;
     justify-content: center;
     width: 100%;
-    padding: 10px 0;
-    background-color: #f8f9fa;
-    margin-top: 60px;
+    padding: 15px 0;
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
 }
-
-
+  
 .nav {
     display: flex;
     justify-content: center;
-    gap: 20px; 
+    gap: 25px;
+    list-style: none;
 }
-
-
+  
 .nav-item {
     list-style-type: none;
 }
-
-
+  
 .nav-link {
     text-decoration: none;
-    font-size: 1.2rem;
-    color: #333;
+    font-size: 1.1rem;
+    color: #555;
+    transition: color 0.25s;
+    padding: 6px 4px;
 }
-
+  
 .nav-link.active {
     font-weight: bold;
+    color: #000;
 }
-
-
+  
+.nav-link:hover {
+    color: #000;
+}
+  
+/* --- ABOUT --- */
 .about-section {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
+    display: none; /* ukrywamy starą sekcję ze zdjęciem */
+}
+
+.about-text {
     max-width: 900px;
-    margin: 100px auto 20px; 
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-
-.profile-img {
-    width: 250px; 
-    height: 250px;
-    border-radius: 50%;
-    object-fit: cover; 
-    margin-right: 30px;
-    margin-bottom: 20px;
-}
-
-
-.profile-text {
-    max-width: 500px;
+    margin: 100px auto;   /* było 60px → teraz tekst jest niżej */
     text-align: center;
+    padding: 0 20px;
 }
 
-
-h2 {
-    margin-bottom: 15px;
-    font-size: 2rem;
+.about-text h2 {
+    font-size: 2.6rem;    /* było 2.2rem → większy nagłówek */
+    margin-bottom: 25px;
     color: #333;
 }
 
-
-p {
-    margin-bottom: 20px;
-    font-size: 1rem;
-    line-height: 1.6;
-    color: #666;
+.about-text p {
+    font-size: 1.3rem;    /* było 1.15rem → większa czcionka */
+    line-height: 2;       /* luźniejsze odstępy */
+    color: #444;
+    margin-bottom: 35px;
 }
 
-
-.btn {
-    padding: 10px 20px;
+/* Resume button */
+.about-text .btn {
+    padding: 10px 25px;
     font-size: 1rem;
-    color: #fff;
+    border-radius: 6px;
     background-color: #333;
-    border: none;
-    border-radius: 5px;
-    text-decoration: none;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    color: #fff;
+    transition: background-color 0.25s;
 }
 
-.btn:hover {
+.about-text .btn:hover {
     background-color: #555;
 }
-
-
-@media (max-width: 768px) {
-    .about-section {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        padding: 15px;
-    }
-
-    .profile-img {
-        margin-right: 0;
-        margin-bottom: 15px;
-        width: 200px;
-        height: 200px;
-    }
-
-    .profile-text {
-        max-width: 100%;
-    }
-
-    
-    .nav {
-        flex-direction: column;
-        gap: 10px;
-    }
-   
-.logo-img {
-    max-width: 250px; 
-    height: auto; 
+  
+/* --- CONTACT --- */
+.contact-wrapper {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
 }
-
-/* contact page*/
+  
+.contact-container {
+    display: flex;
+    align-items: stretch;
+    max-width: 1100px;
+    width: 100%;
+    gap: 40px;
+}
+  
+/* Zdjęcie po lewej */
+.contact-image {
+    flex: 1;
+    min-width: 280px;
+    border-radius: 12px;
+    overflow: hidden;
+}
+.contact-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+  
+/* Formularz po prawej */
+.contact-section {
+    flex: 1;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+  
 .contact-heading {
     font-size: 2.5rem;
-    margin-bottom: 1rem;
-  }
+    margin-bottom: 0.5rem;
+    color: #333;
+}
   
-  .curly-arrow {
-    font-size: 2rem;
+.contact-subtext {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
     color: #555;
-  }
+}
   
-  .contact-icons i {
-    font-size: 2.5rem; 
-    color: #333;
-    transition: color 0.3s;
-  }
+/* Formularz */
+.contact-form {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
   
-  .contact-icons i:hover {
-    color: #007bff;
-  }
+.contact-form .form-group {
+    margin-bottom: 0;
+}
   
-  .contact-container {
-    margin-top: 100px; 
-  }
+.contact-form label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #444;
+}
   
-  .contact-icon {
-    text-decoration: none;
-  }
-  /* home page*/
-  body {
-    font-family: 'Playfair Display', serif;
-    background-color: #fff;
-    color: #333;
-  }
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+}
   
-  .logo-img {
-    height: 60px;
-  }
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #333333;
+    box-shadow: 0 0 6px rgba(166,124,82,0.18);
+    outline: none;
+}
   
-  /* Możesz dodać efekt hover do linków nawigacyjnych */
-  .nav-link:hover {
-    color: #000;
-    text-decoration: underline;
-  }
+/* Przycisk formularza */
+.contact-form .btn {
+    background-color: #333333;
+    color: #fff;
+    padding: 14px;
+    font-size: 1.05rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+}
   
+.contact-form .btn:hover {
+    background-color: #8c6239;
+    transform: translateY(-2px);
+}
   
-
+/* --- Responsywność --- */
+@media (max-width: 900px) {
+    .contact-container {
+      flex-direction: column;
+    }
   
-  
-  
-  
-
-  
-  
-
-  
-  
-  
-
+    .contact-image {
+      height: 260px;
+      width: 100%;
+    }
+    .contact-heading {
+      font-size: 2rem;
+    }
+    
+    
 }
