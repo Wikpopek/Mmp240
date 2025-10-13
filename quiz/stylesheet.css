@@ -1,3 +1,6 @@
+/* === IMPORT FONTÓW === */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600&display=swap');
+
 /* === RESET === */
 * {
   margin: 0;
@@ -7,8 +10,8 @@
 
 /* === STRONA GŁÓWNA === */
 body {
-  font-family: 'Segoe UI', Tahoma, sans-serif;
-  background-color: #57068c; /* NYU violet */
+  font-family: 'Poppins', 'Segoe UI', Tahoma, sans-serif;
+  background: linear-gradient(to bottom, #ffffff 90%, #f4e9ff 100%);
   min-height: 100vh;
   position: relative;
   overflow-x: hidden;
@@ -21,24 +24,34 @@ body {
   max-width: 900px;
   margin: 80px auto;
   padding: 60px;
-  background: #ffffff;
+  background: linear-gradient(145deg, #ffffff 0%, #f7f1ff 100%);
   border-radius: 25px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+  box-shadow: 0 10px 30px rgba(87, 6, 140, 0.15);
   position: relative;
   z-index: 2;
   text-align: center;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.container:hover {
+  box-shadow: 0 15px 40px rgba(87, 6, 140, 0.25);
+  transform: translateY(-3px);
 }
 
 /* === NAGŁÓWKI === */
 h1 {
+  font-family: 'Playfair Display', serif;
   font-size: 3em;
   color: #57068c;
   margin-bottom: 40px;
+  letter-spacing: 1px;
 }
 
 h2 {
+  font-family: 'Playfair Display', serif;
   color: #7b2cbf;
   margin-top: 30px;
+  font-weight: 600;
 }
 
 /* === PYTANIA === */
@@ -50,6 +63,7 @@ h2 {
   box-shadow: 0 5px 15px rgba(0,0,0,0.08);
   text-align: left;
   font-size: 1.2em;
+  font-family: 'Poppins', sans-serif;
 }
 
 /* === ODPOWIEDZI === */
@@ -60,27 +74,31 @@ label {
   cursor: pointer;
   padding: 8px 12px;
   border-radius: 10px;
-  transition: background 0.25s;
+  transition: background 0.25s, transform 0.2s;
+  font-family: 'Poppins', sans-serif;
 }
 
 label:hover {
-  background: #ece2ff; /* delikatny fioletowy hover */
+  background: #ece2ff;
+  transform: translateX(4px);
 }
 
 /* === PRZYCISK === */
 button {
   display: inline-block;
-  background: linear-gradient(135deg, #57068c, #7b2cbf);
+  background: linear-gradient(135deg, #7b2cbf, #57068c);
   color: #fff;
   border: none;
   padding: 18px 50px;
   border-radius: 30px;
-  font-size: 1.4em;
-  font-weight: bold;
+  font-size: 1.3em;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
   cursor: pointer;
   margin-top: 50px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.25);
-  transition: 0.3s;
+  transition: 0.3s ease;
+  letter-spacing: 0.5px;
 }
 
 button:hover {
@@ -92,8 +110,9 @@ button:hover {
 #result, #results {
   margin-top: 40px;
   font-size: 1.5em;
-  font-weight: bold;
+  font-weight: 500;
   color: #57068c;
+  font-family: 'Poppins', sans-serif;
 }
 
 #result ul, #results ul {
@@ -109,6 +128,8 @@ button:hover {
   text-align: left;
   position: relative;
   padding-right: 25px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
 }
 
 #result li::after, #results li::after {
@@ -121,154 +142,8 @@ button:hover {
 
 /* === TŁO Z IKONAMI === */
 .bg-icon {
-  position: absolute;
-  z-index: 0; /* pod quizem */
-  pointer-events: none;
-  filter: drop-shadow(0 2px 3px rgba(0,0,0,0.1));
-  animation: float 12s ease-in-out infinite;
-  background: transparent !important;
-  opacity: 0.4;
-  user-select: none;
-}
-
-/* === ANIMACJA IKON === */
-@keyframes float {
-  0% { transform: translateY(0px) rotate(0deg); }
-  50% { transform: translateY(-15px) rotate(3deg); }
-  100% { transform: translateY(0px) rotate(0deg); }
-}
-
-/* === MEDIA QUERIES === */
-@media (max-width: 768px) {
-  h1 { font-size: 2.3em; }
-  .container { padding: 40px 20px; }
-  button { font-size: 1.1em; padding: 14px 35px; }
-}
-/* === RESET === */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* === STRONA GŁÓWNA === */
-body {
-  font-family: 'Segoe UI', Tahoma, sans-serif;
-  background-color: #57068c; /* NYU violet */
-  min-height: 100vh;
-  position: relative;
-  overflow-x: hidden;
-  overflow-y: auto;
-}
-
-/* === KONTAINER QUIZU / WYNIKÓW === */
-.container {
-  width: 95%;
-  max-width: 900px;
-  margin: 80px auto;
-  padding: 60px;
-  background: #ffffff;
-  border-radius: 25px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
-  position: relative;
-  z-index: 2;
-  text-align: center;
-}
-
-/* === NAGŁÓWKI === */
-h1 {
-  font-size: 3em;
-  color: #57068c;
-  margin-bottom: 40px;
-}
-
-h2 {
-  color: #7b2cbf;
-  margin-top: 30px;
-}
-
-/* === PYTANIA === */
-.question {
-  background: #fdfbff;
-  padding: 25px;
-  margin-bottom: 30px;
-  border-radius: 20px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-  text-align: left;
-  font-size: 1.2em;
-}
-
-/* === ODPOWIEDZI === */
-label {
-  display: block;
-  margin-top: 12px;
-  font-size: 1.1em;
-  cursor: pointer;
-  padding: 8px 12px;
-  border-radius: 10px;
-  transition: background 0.25s;
-}
-
-label:hover {
-  background: #ece2ff; /* delikatny fioletowy hover */
-}
-
-/* === PRZYCISK === */
-button {
-  display: inline-block;
-  background: linear-gradient(135deg, #57068c, #7b2cbf);
-  color: #fff;
-  border: none;
-  padding: 18px 50px;
-  border-radius: 30px;
-  font-size: 1.4em;
-  font-weight: bold;
-  cursor: pointer;
-  margin-top: 50px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
-  transition: 0.3s;
-}
-
-button:hover {
-  transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.35);
-}
-
-/* === WYNIKI === */
-#result, #results {
-  margin-top: 40px;
-  font-size: 1.5em;
-  font-weight: bold;
-  color: #57068c;
-}
-
-#result ul, #results ul {
-  list-style-type: none;
-  padding-left: 0;
-  margin: 20px 0;
-}
-
-#result li, #results li {
-  font-size: 1.2em;
-  margin: 10px 0;
-  color: #333;
-  text-align: left;
-  position: relative;
-  padding-right: 25px;
-}
-
-#result li::after, #results li::after {
-  content: '💜';
-  position: absolute;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-/* === TŁO Z IKONAMI === */
-.bg-icon {
-  position: absolute;
-  z-index: 0; /* pod quizem */
+  position: fixed;
+  z-index: 0;
   pointer-events: none;
   filter: drop-shadow(0 2px 3px rgba(0,0,0,0.1));
   animation: float 12s ease-in-out infinite;

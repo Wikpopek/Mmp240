@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Generuj ikony tła
+  // === GENEROWANIE IKON TŁA ===
   const icons = [
     "img/icons/nyu.png",
     "img/icons/bmcc.png",
@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
     "img/icons/usa.png"
   ];
   const columns = 14;
-  const rows = 10; // dajemy więcej wierszy, żeby były w dół też
+  const rows = 10; // więcej wierszy, żeby tło sięgało w dół
   const spacingX = 100 / columns;
   const spacingY = 100 / rows;
 
@@ -32,9 +32,42 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // Quiz logic (jeśli jesteś na quizie)
+  // === BLOKADA SUBMIT, DOPÓKI NIE ZAZNACZONE WSZYSTKIE ODPOWIEDZI ===
   const form = document.getElementById("quizForm");
-  if (form) {
+  const submitButton = document.getElementById("submitBtn");
+
+  if (form && submitButton) {
+    submitButton.disabled = true;
+    submitButton.style.opacity = "0.5";
+    submitButton.style.cursor = "not-allowed";
+
+    function checkAnswers() {
+      const questions = document.querySelectorAll(".question");
+      let allAnswered = true;
+
+      questions.forEach(question => {
+        const radios = question.querySelectorAll('input[type="radio"]');
+        const answered = Array.from(radios).some(radio => radio.checked);
+        if (!answered) {
+          allAnswered = false;
+        }
+      });
+
+      if (allAnswered) {
+        submitButton.disabled = false;
+        submitButton.style.opacity = "1";
+        submitButton.style.cursor = "pointer";
+      } else {
+        submitButton.disabled = true;
+        submitButton.style.opacity = "0.5";
+        submitButton.style.cursor = "not-allowed";
+      }
+    }
+
+    document.querySelectorAll('input[type="radio"]').forEach(radio => {
+      radio.addEventListener("change", checkAnswers);
+    });
+
     form.addEventListener("submit", (e) => {
       e.preventDefault();
       submitQuiz();
@@ -42,7 +75,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-// Twoja funkcja quizu (już masz ją zapewne)
+// === FUNKCJA QUIZU ===
 function submitQuiz() {
   let score = 0;
   let results = {};
@@ -71,3 +104,41 @@ function submitQuiz() {
   localStorage.setItem("quizResults", JSON.stringify(results));
   window.location.href = "result.html";
 }
+// === BLOKADA SUBMIT, DOPÓKI NIE ZAZNACZONE WSZYSTKIE ===
+document.addEventListener("DOMContentLoaded", () => {
+  const submitButton = document.querySelector("button[type='submit'], #submitBtn");
+  const questions = document.querySelectorAll(".question");
+
+  if (!submitButton || questions.length === 0) return;
+
+  // Zablokuj przycisk na start
+  submitButton.disabled = true;
+  submitButton.style.opacity = "0.5";
+  submitButton.style.cursor = "not-allowed";
+
+  function checkAnswers() {
+    let allAnswered = true;
+
+    questions.forEach(question => {
+      const radios = question.querySelectorAll('input[type="radio"]');
+      const answered = Array.from(radios).some(r => r.checked);
+      if (!answered) allAnswered = false;
+    });
+
+    if (allAnswered) {
+      submitButton.disabled = false;
+      submitButton.style.opacity = "1";
+      submitButton.style.cursor = "pointer";
+    } else {
+      submitButton.disabled = true;
+      submitButton.style.opacity = "0.5";
+      submitButton.style.cursor = "not-allowed";
+    }
+  }
+
+  // Sprawdza za każdym razem, gdy coś się zaznaczy
+  document.querySelectorAll('input[type="radio"]').forEach(radio => {
+    radio.addEventListener("change", checkAnswers);
+  });
+});
+
