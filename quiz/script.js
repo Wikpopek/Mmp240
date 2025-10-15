@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // === GENEROWANIE IKON TŁA NA CAŁĄ WYSOKOŚĆ STRONY ===
+  // === GENEROWANIE IKON TŁA — DZIAŁA NA TELEFONIE I KOMPUTERZE ===
   const icons = [
     "img/icons/nyu.png",
     "img/icons/bmcc.png",
@@ -10,11 +10,13 @@ document.addEventListener("DOMContentLoaded", () => {
   ];
 
   try {
-    const columns = 14; // ilość kolumn (poziomo)
-    const rows = 10;    // ilość wierszy (pionowo)
-    const spacingX = 100 / columns; // rozstaw w szerokości
-    const docHeight = document.body.scrollHeight; // pełna wysokość strony
-    const spacingY = docHeight / rows; // rozstaw w pikselach (nie vh)
+    // Używamy rozmiarów w pikselach, bo vh/vw psują się na mobile
+    const columns = 14;   // ile ikon w poziomie
+    const rows = 12;      // ile ikon w pionie (więcej, żeby całe tło sięgało do dołu)
+    const docWidth = window.innerWidth;
+    const docHeight = Math.max(document.body.scrollHeight, window.innerHeight);
+    const spacingX = docWidth / columns;
+    const spacingY = docHeight / rows;
 
     for (let y = 0; y < rows; y++) {
       for (let x = 0; x < columns; x++) {
@@ -22,28 +24,28 @@ document.addEventListener("DOMContentLoaded", () => {
         img.src = icons[(x + y) % icons.length];
         img.classList.add("bg-icon");
 
-        // Oblicz pozycję — cała wysokość strony
-        const leftPercent = x * spacingX;
-        const topPx = y * spacingY;
+        // Równe pozycjonowanie bez nakładania
+        const left = x * spacingX;
+        const top = y * spacingY;
+        img.style.left = `${left}px`;
+        img.style.top = `${top}px`;
 
-        img.style.left = `${leftPercent}vw`;
-        img.style.top = `${topPx}px`;
-
-        img.style.width = "70px";
+        // Rozmiar dopasowany do odstępów
+        const size = Math.min(spacingX, spacingY) * 0.8;
+        img.style.width = `${size}px`;
         img.style.opacity = 0.35;
+
+        // Kluczowe — nie blokują klikania i są pod spodem
         img.style.position = "absolute";
         img.style.zIndex = "-1";
         img.style.pointerEvents = "none";
         img.style.userSelect = "none";
 
-        // Delikatne naturalne przesunięcie
-        img.style.transform = `translate(${(Math.random() - 0.5) * 10}px, ${(Math.random() - 0.5) * 10}px)`;
-
         document.body.appendChild(img);
       }
     }
-  } catch (e) {
-    console.warn("⚠️ Background icons load error:", e);
+  } catch (err) {
+    console.warn("⚠️ Background icon error:", err);
   }
 
   // === BLOKADA SUBMIT, DOPÓKI NIE ZAZNACZONE WSZYSTKIE ===
@@ -67,8 +69,8 @@ document.addEventListener("DOMContentLoaded", () => {
       lockButton(!allAnswered);
     }
 
-    document.querySelectorAll('input[type="radio"]').forEach(radio =>
-      radio.addEventListener("change", checkAnswers)
+    document.querySelectorAll('input[type="radio"]').forEach(r =>
+      r.addEventListener("change", checkAnswers)
     );
 
     form.addEventListener("submit", e => {
@@ -82,14 +84,7 @@ document.addEventListener("DOMContentLoaded", () => {
 function submitQuiz() {
   let score = 0;
   const results = {};
-
-  const answers = {
-    q1: "usa",
-    q2: "all",
-    q3: "all",
-    q4: "italian",
-    q5: "media"
-  };
+  const answers = { q1: "usa", q2: "all", q3: "all", q4: "italian", q5: "media" };
 
   for (let key in answers) {
     const selected = document.querySelector(`input[name="${key}"]:checked`);
@@ -105,5 +100,6 @@ function submitQuiz() {
     console.warn("⚠️ localStorage unavailable:", e);
   }
 
-  window.location.assign("result.html");
+  // działa w Safari, Chrome, Android i iPhone
+  window.location.href = "result.html";
 }
