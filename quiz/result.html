@@ -3,50 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Quiz Results</title>
-  <script src="script.js" defer></script>
+  <title>Quiz Results 💜</title>
   <link rel="stylesheet" href="stylesheet.css" />
 </head>
 <body>
-
-  <!-- === TŁO Z IKONAMI (niewidoczne, żeby nie psuły wyglądu) === -->
-  <img src="icon1.png" class="bg-icon" style="top:10%; left:15%; width:70px; opacity:0;">
-  <img src="icon2.png" class="bg-icon" style="top:40%; left:70%; width:90px; opacity:0;">
-  <img src="icon3.png" class="bg-icon" style="top:75%; left:25%; width:80px; opacity:0;">
-  <img src="icon4.png" class="bg-icon" style="top:20%; left:85%; width:100px; opacity:0;">
-  <img src="icon5.png" class="bg-icon" style="top:55%; left:10%; width:60px; opacity:0;">
-
-  <!-- === GŁÓWNY KONTENER === -->
   <div class="container">
     <h1>Your Results</h1>
     <div id="result"></div>
-    <button onclick="goBack()">Go back to Quiz</button>
+    <button id="backBtn">Go back to Quiz</button>
   </div>
 
-  <!-- === SKRYPT === -->
-  <script>
-    const score = localStorage.getItem("quizScore");
-    const results = JSON.parse(localStorage.getItem("quizResults"));
-    const div = document.getElementById("result");
-
-    if (score !== null && results) {
-      let html = `<p>You got <strong>${score}/5</strong> correct!</p><ul>`;
-      let i = 1;
-      for (let key in results) {
-        html += `<li>Question ${i}: ${results[key] ? "✅ Correct" : "❌ Wrong"}</li>`;
-        i++;
-      }
-      html += "</ul>";
-      div.innerHTML = html;
-    } else {
-      div.innerHTML = `<p>No results found. Please take the quiz first.</p>`;
-    }
-
-    function goBack() {
-      localStorage.removeItem("quizScore");
-      localStorage.removeItem("quizResults");
-      window.location.href = "quiz.html";
-    }
-  </script>
+  <script src="script.js" defer></script>
 </body>
 </html>
