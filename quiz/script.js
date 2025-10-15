@@ -1,4 +1,4 @@
-// wspólna funkcja do generowania tła
+// === GENEROWANIE IKON TŁA ===
 function generateBackground() {
   const icons = [
     "img/icons/nyu.png",
@@ -8,23 +8,37 @@ function generateBackground() {
     "img/icons/lipgloss.png",
     "img/icons/usa.png"
   ];
-  const columns = 14;
-  const rows = 10;
-  const docWidth = window.innerWidth;
-  const docHeight = Math.max(document.body.scrollHeight, window.innerHeight);
-  const spacingX = docWidth / columns;
-  const spacingY = docHeight / rows;
+
+  const columns = 14; // liczba kolumn (szerokość)
+  const rows = 10;    // liczba wierszy (wysokość)
+  const spacingX = 100 / columns;
+  const spacingY = 100 / rows;
+
+  // usuń stare ikony (gdy np. powrót z result.html)
+  document.querySelectorAll(".bg-icon").forEach(el => el.remove());
+
+  let seed = 12345; // stały seed -> identyczne rozmieszczenie
+  function random() {
+    seed = (seed * 16807) % 2147483647;
+    return (seed - 1) / 2147483646;
+  }
 
   for (let y = 0; y < rows; y++) {
     for (let x = 0; x < columns; x++) {
       const img = document.createElement("img");
-      img.src = icons[(x + y) % icons.length];
+      img.src = icons[Math.floor(random() * icons.length)];
       img.classList.add("bg-icon");
-      img.style.left = `${x * spacingX}px`;
-      img.style.top = `${y * spacingY}px`;
-      img.style.width = "70px";
-      img.style.position = "absolute";
-      img.style.pointerEvents = "none";
+
+      const offsetX = (random() - 0.5) * spacingX * 0.2;
+      const offsetY = (random() - 0.5) * spacingY * 0.2;
+
+      img.style.left = `${x * spacingX + offsetX}vw`;
+      img.style.top = `${y * spacingY + offsetY}vh`;
+
+      const size = 40 + random() * 40; // 40–80px
+      img.style.width = `${size}px`;
+      img.style.opacity = 0.3 + random() * 0.4;
+
       document.body.appendChild(img);
     }
   }
@@ -69,12 +83,8 @@ window.addEventListener("load", () => {
         if (correct) score++;
       }
 
-      try {
-        localStorage.setItem("quizScore", score);
-        localStorage.setItem("quizResults", JSON.stringify(results));
-      } catch (err) {
-        console.warn("LocalStorage blocked:", err);
-      }
+      localStorage.setItem("quizScore", score);
+      localStorage.setItem("quizResults", JSON.stringify(results));
 
       window.location.href = "result.html";
     });
@@ -83,12 +93,7 @@ window.addEventListener("load", () => {
   // --- RESULT.HTML ---
   if (resultDiv) {
     const score = localStorage.getItem("quizScore");
-    let results = {};
-    try {
-      results = JSON.parse(localStorage.getItem("quizResults")) || {};
-    } catch (e) {
-      console.warn("parse error", e);
-    }
+    const results = JSON.parse(localStorage.getItem("quizResults") || "{}");
 
     if (score !== null && Object.keys(results).length > 0) {
       let html = `<p>You got <strong>${score}/5</strong> correct!</p><ul>`;
@@ -97,14 +102,13 @@ window.addEventListener("load", () => {
         html += `<li>Question ${i}: ${results[key] ? "✅ Correct" : "❌ Wrong"}</li>`;
         i++;
       }
-      html += `</ul>`;
+      html += "</ul>";
       resultDiv.innerHTML = html;
     } else {
       resultDiv.innerHTML = `<p>No results found. Please take the quiz first.</p>`;
     }
 
-    const back = document.getElementById("backBtn");
-    back.addEventListener("click", () => {
+    document.getElementById("backBtn").addEventListener("click", () => {
       window.location.href = "quiz.html";
     });
   }
