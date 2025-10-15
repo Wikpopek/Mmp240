@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // === GENEROWANIE IKON TŁA (równo obok siebie, bez nakładania) ===
+  // === GENEROWANIE IKON TŁA NA CAŁĄ WYSOKOŚĆ STRONY ===
   const icons = [
     "img/icons/nyu.png",
     "img/icons/bmcc.png",
@@ -10,30 +10,33 @@ document.addEventListener("DOMContentLoaded", () => {
   ];
 
   try {
-    const columns = 14; // poziomo
-    const rows = 10;    // pionowo
-    const spacingX = 100 / columns;
-    const spacingY = 100 / rows;
+    const columns = 14; // ilość kolumn (poziomo)
+    const rows = 10;    // ilość wierszy (pionowo)
+    const spacingX = 100 / columns; // rozstaw w szerokości
+    const docHeight = document.body.scrollHeight; // pełna wysokość strony
+    const spacingY = docHeight / rows; // rozstaw w pikselach (nie vh)
 
     for (let y = 0; y < rows; y++) {
       for (let x = 0; x < columns; x++) {
         const img = document.createElement("img");
-        img.src = icons[(x + y) % icons.length]; // powtarzaj kolejno ikony
+        img.src = icons[(x + y) % icons.length];
         img.classList.add("bg-icon");
 
-        // dokładne pozycje w siatce – bez nakładania
-        img.style.left = `${x * spacingX}vw`;
-        img.style.top = `${y * spacingY}vh`;
+        // Oblicz pozycję — cała wysokość strony
+        const leftPercent = x * spacingX;
+        const topPx = y * spacingY;
 
-        // każda ikona w jednym rozmiarze – nie kolidują
+        img.style.left = `${leftPercent}vw`;
+        img.style.top = `${topPx}px`;
+
         img.style.width = "70px";
         img.style.opacity = 0.35;
-        img.style.position = "fixed";
-        img.style.zIndex = "0";
+        img.style.position = "absolute";
+        img.style.zIndex = "-1";
         img.style.pointerEvents = "none";
         img.style.userSelect = "none";
 
-        // lekkie przesunięcie (opcjonalnie – naturalniejszy układ)
+        // Delikatne naturalne przesunięcie
         img.style.transform = `translate(${(Math.random() - 0.5) * 10}px, ${(Math.random() - 0.5) * 10}px)`;
 
         document.body.appendChild(img);
