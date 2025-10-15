@@ -1,18 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About Me Quiz 💌</title>
-  <link rel="stylesheet" href="stylesheet.css">
-  <script src="script.js" defer></script> <!-- zakładam, że masz tu swoją funkcję submitQuiz() -->
+  <link rel="stylesheet" href="stylesheet.css" />
+  <style>
+    .bg-icon {
+      position: absolute;
+      z-index: 0;
+      pointer-events: none;
+      user-select: none;
+      opacity: 0.4;
+    }
+  </style>
 </head>
 <body>
   <div class="container">
     <h1>Short Quiz about me!</h1>
 
-    <form id="quizForm" onsubmit="event.preventDefault(); submitQuiz();">
-
+    <form id="quizForm">
       <!-- Question 1 -->
       <div class="question">
         <p>1. Where was I born?</p>
@@ -58,8 +65,10 @@
         <label><input type="radio" name="q5" value="media"> Work in media and become a UX/UI designer</label>
       </div>
 
-      <button type="submit">Submit Quiz </button>
+      <button type="submit" id="submitBtn">Submit Quiz</button>
     </form>
   </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
