@@ -3,195 +3,196 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
+  }
   
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Cormorant+Garamond:wght@400;500&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Cormorant+Garamond:wght@400;500&display=swap');
   
-/* Body */
-body {
+  /* Body */
+  body {
     font-family: 'Playfair Display', serif;
     background-color: #faf8f2;
     color: #333;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-}
+  }
   
-/* Header */
-header {
+  /* Header */
+  header {
     width: 100%;
     background-color: #fff;
     text-align: center;
     padding: 20px 0;
-}
+  }
   
-.logo-img {
+  .logo-img {
     max-width: 200px;
     height: auto;
-}
+  }
   
-/* Navbar */
-.navbar {
+  /* Navbar */
+  .navbar {
     display: flex;
     justify-content: center;
     width: 100%;
     padding: 15px 0;
     background-color: #fff;
     border-bottom: 1px solid #eee;
-}
+  }
   
-.nav {
+  .nav {
     display: flex;
     justify-content: center;
     gap: 25px;
     list-style: none;
-}
+  }
   
-.nav-item {
+  .nav-item {
     list-style-type: none;
-}
+  }
   
-.nav-link {
+  .nav-link {
     text-decoration: none;
     font-size: 1.1rem;
     color: #555;
     transition: color 0.25s;
     padding: 6px 4px;
-}
+  }
   
-.nav-link.active {
+  .nav-link.active {
     font-weight: bold;
     color: #000;
-}
+  }
   
-.nav-link:hover {
+  .nav-link:hover {
     color: #000;
-}
+  }
   
-/* --- ABOUT --- */
-.about-section {
+  /* --- ABOUT --- */
+  .about-section {
     display: none;
-}
-
-.about-text {
+  }
+  
+  .about-text {
     max-width: 900px;
     margin: 100px auto;
     text-align: center;
     padding: 0 20px;
-}
-
-.about-text h2 {
+  }
+  
+  .about-text h2 {
     font-size: 2.6rem;
     margin-bottom: 25px;
     color: #333;
-}
-
-.about-text p {
+  }
+  
+  .about-text p {
     font-size: 1.3rem;
     line-height: 2;
     color: #444;
     margin-bottom: 35px;
-}
-
-/* Resume button */
-.about-text .btn {
+  }
+  
+  /* Resume button */
+  .about-text .btn {
     padding: 10px 25px;
     font-size: 1rem;
     border-radius: 6px;
     background-color: #333;
     color: #fff;
     transition: background-color 0.25s;
-}
-
-.about-text .btn:hover {
-    background-color: #555;
-}
+  }
   
-/* --- CONTACT --- */
-.contact-wrapper {
+  .about-text .btn:hover {
+    background-color: #555;
+  }
+  
+  /* --- CONTACT --- */
+  .contact-wrapper {
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 60px 20px;
-}
+  }
   
-.contact-container {
+  .contact-container {
     display: flex;
     align-items: stretch;
     max-width: 1100px;
     width: 100%;
     gap: 40px;
-}
+  }
   
-.contact-image {
+  .contact-image {
     flex: 1;
     min-width: 280px;
     border-radius: 12px;
     overflow: hidden;
-}
-.contact-image img {
+  }
+  
+  .contact-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
-}
+  }
   
-.contact-section {
+  .contact-section {
     flex: 1;
     text-align: left;
     display: flex;
     flex-direction: column;
     justify-content: center;
-}
+  }
   
-.contact-heading {
+  .contact-heading {
     font-size: 2.5rem;
     margin-bottom: 0.5rem;
     color: #333;
-}
+  }
   
-.contact-subtext {
+  .contact-subtext {
     font-size: 1rem;
     margin-bottom: 1.5rem;
     color: #555;
-}
+  }
   
-.contact-form {
+  .contact-form {
     padding: 0;
     display: flex;
     flex-direction: column;
     gap: 18px;
-}
+  }
   
-.contact-form .form-group {
+  .contact-form .form-group {
     margin-bottom: 0;
-}
+  }
   
-.contact-form label {
+  .contact-form label {
     display: block;
     font-weight: 600;
     margin-bottom: 0.5rem;
     color: #444;
-}
+  }
   
-.contact-form input,
-.contact-form textarea {
+  .contact-form input,
+  .contact-form textarea {
     width: 100%;
     padding: 14px 16px;
     border: 1px solid #ccc;
     border-radius: 8px;
     font-size: 1rem;
-}
+  }
   
-.contact-form input:focus,
-.contact-form textarea:focus {
+  .contact-form input:focus,
+  .contact-form textarea:focus {
     border-color: #333333;
-    box-shadow: 0 0 6px rgba(166,124,82,0.18);
+    box-shadow: 0 0 6px rgba(166, 124, 82, 0.18);
     outline: none;
-}
+  }
   
-.contact-form .btn {
+  .contact-form .btn {
     background-color: #333333;
     color: #fff;
     padding: 14px;
@@ -200,14 +201,14 @@ header {
     border-radius: 8px;
     cursor: pointer;
     font-weight: 600;
-}
+  }
   
-.contact-form .btn:hover {
+  .contact-form .btn:hover {
     background-color: #8c6239;
     transform: translateY(-2px);
-}
+  }
   
-@media (max-width: 900px) {
+  @media (max-width: 900px) {
     .contact-container {
       flex-direction: column;
     }
@@ -219,18 +220,61 @@ header {
     .contact-heading {
       font-size: 2rem;
     }
-}
-
-/* --- PORTFOLIO HEADING --- */
-.portfolio-heading {
-  font-family: 'Cormorant Garamond', serif;
-  font-weight: 400;
-  font-size: 2rem;
-  letter-spacing: 0.6px;
-  color: #3a3a3a;
-  text-align: center;
-  margin-bottom: 50px;
-  font-style: italic;
-  line-height: 1.4;
-  text-shadow: 0px 1px 2px rgba(0,0,0,0.05);
-}
+  }
+  
+  /* --- PORTFOLIO HEADING --- */
+  .portfolio-heading {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 400;
+    font-size: 2rem;
+    letter-spacing: 0.6px;
+    color: #3a3a3a;
+    text-align: center;
+    margin-bottom: 50px;
+    font-style: italic;
+    line-height: 1.4;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+  }
+  
+  /* --- PROJECT 3: SAMO ZDJĘCIE, BEZ BIAŁEGO TŁA --- */
+  .no-bg-card {
+    background: none;
+    border: none;
+    box-shadow: none;
+    text-align: center;
+  }
+  
+  .no-bg-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  
+  .no-bg-text {
+    margin-top: 15px;
+  }
+  
+  .no-bg-text h3 {
+    font-size: 1.5rem;
+    color: #222;
+    margin-bottom: 8px;
+  }
+  
+  .no-bg-text p {
+    font-size: 1rem;
+    color: #444;
+    max-width: 500px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+  
+  /* --- HOVER NA KARTACH --- */
+  .card:hover {
+    transform: translateY(-4px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0.7rem 1.2rem rgba(0, 0, 0, 0.15);
+  }
+  
